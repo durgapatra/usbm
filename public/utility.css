@@ -1,0 +1,61 @@
+
+.triangleBox{
+    margin-left: 50%;
+    border-left:10px solid transparent ;
+    border-right:10px solid transparent;
+    border-top:10px solid   transparent ;
+    border-bottom:10px solid rgba(0, 88, 160, 0.9) ;
+    position:absolute;
+    left: 0;
+    top:18px;
+    display: block;
+}
+#subMenu{
+    position: absolute;
+   min-width: 0;
+    background-color: rgba(0, 88, 160, 0.9);
+    left: 0;
+    top: 38px;
+    color: #e0dff0;
+    height: 18px;
+    display: table;
+    text-align: center;
+    line-height: 22px;
+}
+.menuContainer{
+    position: relative;
+    z-index: 100;
+}
+#subMenu ul{
+    border-bottom: 1px solid black;
+    display:inline-block;
+    text-decoration: none;
+    background-color: rgba(0, 88, 160, 0.9);
+    margin: 0;
+    padding: 10px 10px;
+}
+#subMenu ul li{
+    width:200px;
+    text-align: left;
+    position: relative;
+    list-style: none;
+    display: list-item;
+}
+
+#subMenu ul li  a{
+    display:block ;
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: normal;
+    height: auto;
+    line-height: 1.4em;
+    padding: 5px 1px;
+    text-transform: none;
+    border-bottom: 1px solid #073860;
+    border-right: none;
+    border-bottom: 1px solid black;
+}
+#subMenu ul a:hover{
+    color: red;
+}
