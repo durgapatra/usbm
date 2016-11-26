@@ -28899,12 +28899,12 @@
 	                _react2.default.createElement(
 	                    "span",
 	                    null,
-	                    _react2.default.createElement("img", { src: "\\uploads\\logo.jpeg", className: "logo", alt: "" }),
-	                    _react2.default.createElement(
-	                        "p",
-	                        null,
-	                        "UNITED SCHOOL OF BUSINESS MAGANENT"
-	                    )
+	                    _react2.default.createElement("img", { src: "\\uploads\\logo.jpeg", className: "logo", alt: "" })
+	                ),
+	                _react2.default.createElement(
+	                    "span",
+	                    { id: "clg-name", className: "clg-name-3d" },
+	                    "UNITED SCHOOL OF BUSINESS MANEGENT"
 	                ),
 	                _react2.default.createElement(
 	                    "span",

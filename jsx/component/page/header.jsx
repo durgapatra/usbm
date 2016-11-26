@@ -44,8 +44,10 @@ export default class Header extends React.Component {
             <div className="header">
                  <span>
                      <img src="\uploads\logo.jpeg" className="logo" alt=""/>
-                     <p>UNITED SCHOOL OF BUSINESS MAGANENT</p>
                  </span>
+                <span id="clg-name" className="clg-name-3d">
+                     UNITED SCHOOL OF BUSINESS MANEGENT
+                </span>
                 <span id="headerSpanHome">
                      <Link to="/">  HOME</Link>
                 </span>
