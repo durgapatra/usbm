@@ -28,7 +28,7 @@ export default class Header extends React.Component {
             <Link to="college-map">College Map</Link>,
             <Link to="sitemap">Sitemap</Link>
         ]
-        this.others=[
+        this.others = [
             <Link to="admission">Admission</Link>,
             <Link to="news">News</Link>,
             <Link to="events">Events</Link>,
@@ -42,7 +42,10 @@ export default class Header extends React.Component {
     render() {
         return (
             <div className="header">
-
+                 <span>
+                     <img src="\uploads\logo.jpeg" className="logo" alt=""/>
+                     <p>UNITED SCHOOL OF BUSINESS MAGANENT</p>
+                 </span>
                 <span id="headerSpanHome">
                      <Link to="/">  HOME</Link>
                 </span>

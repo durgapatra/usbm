@@ -1,0 +1,35 @@
+.header{
+    height:50px;
+    background-color: #0a6565;
+}
+.header span{
+    width: 100px;
+    height: 50px;
+    background-color: #4dc71f;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    margin-right: 5px;
+}
+
+.container{
+    height: 650px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.smallBox{
+    height: 300px;
+    width: 300px;
+    background-color: #0a6565;
+    margin:10px 10px ;
+}
+.bigBox{
+    height: 600px;
+    width: 600px;
+    background-color: #0a6565;
+    margin:10px 10px ;
+}

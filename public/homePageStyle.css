@@ -1,33 +1,59 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #0058a0;
+    background-color: RGB(196, 216, 202);
     z-index: 50;
 }
 
 .homePage {
-    width:960px;
     margin: 0 auto;
     min-height: 800px;
-    border:1px solid black;
-    background-color: white;
+    border: 1px solid black;
+    background-color: RGB(17, 166, 64);
     z-index: 98;
 
 }
-#logo{
-    width:550px ;
-    margin:20px 0 20px 185px;
+
+#logo {
+    width: 550px;
+    margin: 20px 0 20px 185px;
 }
-.header{
-    width:960px;
-    height: 48px;
-    background-color: #224e71;
-    box-shadow: 0 1px 1px 1px ;
+
+.header {
+    margin-left: 30px;
+    background-color: #11a640;
+    box-shadow: 0 1px 1px 1px;
     border-radius: 5px;
     display: inline-block;
     position: relative;
 }
-.header span{
+
+.header_logo_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 48px;
+    z-index: 100;
+    height: 48px;
+
+}
+.header_logo_container p{
+    background-color: #11a640;
+    display: inline-block;
+    margin-top: -10px;
+    line-height: 11px;
+    position: absolute;
+    margin-top: 20px;
+    font-size: medium;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+.logo {
+    height: 100px;
+    width: 100px;
+    display:inline-block;
+}
+
+.header span {
     border-right: 1px solid black;
     margin: 0 0 0 0;
     display: inline-block;
@@ -36,71 +62,95 @@ body {
     font-family: Calibri;
     text-decoration: none;
     font-weight: normal;
-    padding: 0 28px 0 28px;
+    padding: 0 25px 0 28px;
     text-transform: uppercase;
     height: 48px;
     text-align: center;
     line-height: 46px;
 }
-.header span a{
+
+.header span a {
+    display: inline-block;
     text-decoration: none;
     display: block;
-    color: #ccc;
+    color: white;
 }
-#headerSpanLogin{
-    margin-left:0;
+
+#headerSpanLogin {
+    margin-left: 0;
     border: 0;
     margin-left: 10px;
 }
-#headerSpanAbout{
 
+#headerSpanAbout {
 
 }
-.header span a:hover{
+
+.header span a:hover {
     color: #ec353e;
 }
-.profilePhotoContainer{
-    margin-top: 3px;
+
+
+.loaderBar {
     position: relative;
-   height: 250px;
-    background-color: #0a6565;
-    width:100%;
+    height: 5px;
+    margin-top: 2px;
+    background-color: red;
+}
+
+.profilePhotoContainer {
+    margin-top: 48px;
+    position: relative;
+    height: 350px;
+    background-color: white;
+    width: 100%;
     z-index: 99;
     box-shadow: 0 0 2px 0;
 }
-.setProfileBtn{
-    margin:200px 0 0 20px;
+
+.setProfileBtn {
+    margin: 200px 0 0 20px;
     text-decoration: none;
     background-color: #0a6565;
     display: inline-block;
 }
-.container{
-    width:900px;
-    background-color: #ffffff;
-    padding: 15px 20px;
-}
-.container h1{
-    font-size: 26px;
-    padding: 6px 0;
-    color:#a50133;
-    font-family:Calibri;
-    float: left;
-}
-.container div p img{
-    padding: 5px 2px 8px 0;
-}
-.float_left{
-    float: left;
-}
-.float_right{
-    float: right;
-}
-.container p img{
- padding: 5px 5px 8px 0;
+
+.writeSUB {
+    height: 50px;
+    background-color: #11a640;
 }
 
-.container p{
-    margin:80px 2px 0  -200px;
+.container {
+    background-color: black;
+    margin: 10px 10px;
+}
+
+.container h1 {
+    font-size: 26px;
+    padding: 6px 0;
+    color: #a50133;
+    font-family: Calibri;
+    float: left;
+}
+
+.container div p img {
+    padding: 5px 2px 8px 0;
+}
+
+.float_left {
+    float: left;
+}
+
+.float_right {
+    float: right;
+}
+
+.container p img {
+    padding: 5px 5px 8px 0;
+}
+
+.container p {
+    margin: 80px 2px 0 -200px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: #424141;
@@ -109,29 +159,38 @@ body {
     width: 500px;
     display: table;
 }
-.ourPride{
+
+.homePageFuture {
+    height: 50px;
+    background-color: #11a640;
+}
+
+.ourPride {
     width: 280px;
     height: 235px;
-    border:25px solid gray;
+    border: 25px solid gray;
     float: right;
     margin: 0 25px 0 0;
 }
-.ourPride h1{
+
+.ourPride h1 {
     font-size: 26px;
     padding: 6px 500px 0 0;
-    color:#a50133;
-    font-family:Calibri;
+    color: #a50133;
+    font-family: Calibri;
     display: block;
     margin-left: 25px;
 
 }
-.new{
+
+.new {
     position: absolute;
     padding: 0;
     margin: 0 0 0 0;
     display: inline-block;
 }
-.new li{
+
+.new li {
     padding: 0;
     margin-bottom: 0;
     display: block;

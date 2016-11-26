@@ -2,6 +2,7 @@ import React from "react";
 import {spring, Motion} from "react-motion";
 import Header from "./header";
 import $ from  "jquery";
+import {Link} from "react-router";
 export default class HomePage extends React.Component {
     constructor() {
         super()
@@ -33,24 +34,36 @@ export default class HomePage extends React.Component {
             console.log(data)
         })
     }
-     cournce(number){
-         var myLenght=number.toString().length;
-         console.log(myLenght)
-         if(myLenght==5){
-             
-         }
 
-     }
+    cournce(number) {
+        var myLenght = number.toString().length;
+        console.log(myLenght)
+        if (myLenght == 5) {
+
+        }
+
+    }
+
+    myPageOnload() {
+
+    }
+
     render() {
         return (
-            <div>
-                <img id="logo" src="logo.png" alt="United School of Business Management"/>
+            <div onLoad={this.myPageOnload()}>
+
                 <div className="homePage">
-                    <Header></Header>
+                    <div className="header_logo_container">
+                        <Header></Header>
+                    </div>
                     <div className="profilePhotoContainer">
+                        <div className="loaderBar"></div>
+                        <img id="logo" src="logo.png" alt="United School of Business Management"/>
                         <input type="file" name="profilePhoto" onChange={this.handleProfile.bind(this)}
                                className="setProfileBtn"/>
                         <img src="" alt=""/>
+                    </div>
+                    <div className="writeSUB">
                     </div>
                     <div className="container">
                         <h1>USBM AT A GLANCE</h1>
@@ -68,7 +81,6 @@ export default class HomePage extends React.Component {
                             (AICTE), Ministry of HRD, Govt. of India and is affiliated to Biju Patnaik University
                             of Technology (BPUT), Govt, of Orissa.
                         </p>
-    `                    <button onClick={this.cournce.bind(this,10000)}>click</button>
                         <div>
                             <h1 className="float_right">Our Pride</h1>
                             <div className="ourPride">
@@ -79,11 +91,12 @@ export default class HomePage extends React.Component {
                                     >
                                         {(styles)=> {
                                             return <ul className="new" style={{marginBottom:styles.x*355}}>
-                                                    {this.state.LastNews.map((e,i)=>{
-                                                      return  <li key={i}>{e}</li>
-                                                    })}
-                                                   </ul>
+                                                {this.state.LastNews.map((e, i)=> {
+                                                    return <li key={i}>{e}</li>
+                                                })}
+                                            </ul>
                                         }}
+
                                     </Motion>
                                 </ul>
                             </div>
@@ -91,6 +104,7 @@ export default class HomePage extends React.Component {
                     </div>
 
                 </div>
+                <div className="homePageFuture"></div>
             </div>
 
         )

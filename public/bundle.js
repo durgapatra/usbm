@@ -27102,11 +27102,13 @@
 
 	var _homePage2 = _interopRequireDefault(_homePage);
 
+	var _newPage = __webpack_require__(255);
+
+	var _newPage2 = _interopRequireDefault(_newPage);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var a = [{ path: "/", component: _homePage2.default
-
-	}];
+	var a = [{ path: "/", component: _homePage2.default }, { path: "/new-page", component: _newPage2.default }];
 	exports.default = a;
 
 /***/ },
@@ -27134,6 +27136,8 @@
 	var _jquery = __webpack_require__(254);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _reactRouter = __webpack_require__(173);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27190,25 +27194,34 @@
 	            if (myLenght == 5) {}
 	        }
 	    }, {
+	        key: "myPageOnload",
+	        value: function myPageOnload() {}
+	    }, {
 	        key: "render",
 	        value: function render() {
 	            var _this2 = this;
 
 	            return _react2.default.createElement(
 	                "div",
-	                null,
-	                _react2.default.createElement("img", { id: "logo", src: "logo.png", alt: "United School of Business Management" }),
+	                { onLoad: this.myPageOnload() },
 	                _react2.default.createElement(
 	                    "div",
 	                    { className: "homePage" },
-	                    _react2.default.createElement(_header2.default, null),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "header_logo_container" },
+	                        _react2.default.createElement(_header2.default, null)
+	                    ),
 	                    _react2.default.createElement(
 	                        "div",
 	                        { className: "profilePhotoContainer" },
+	                        _react2.default.createElement("div", { className: "loaderBar" }),
+	                        _react2.default.createElement("img", { id: "logo", src: "logo.png", alt: "United School of Business Management" }),
 	                        _react2.default.createElement("input", { type: "file", name: "profilePhoto", onChange: this.handleProfile.bind(this),
 	                            className: "setProfileBtn" }),
 	                        _react2.default.createElement("img", { src: "", alt: "" })
 	                    ),
+	                    _react2.default.createElement("div", { className: "writeSUB" }),
 	                    _react2.default.createElement(
 	                        "div",
 	                        { className: "container" },
@@ -27222,12 +27235,6 @@
 	                            { className: "float_left  ", style: { display: "block" } },
 	                            _react2.default.createElement("img", { className: "float_left", src: "\\uploads\\collage-images.jpg", alt: "" }),
 	                            "United School of Business Management (USBM) is conveniently located in the heart of Bhubaneswar, the capital city of Orissa which is blended with ancient and modern Indian culture. USBM is established with an initiative and support from some of the leading academicians, industrialists and business houses. Within a short span, it has revolutionised the concept of professional MBA & MCA training. It has ceaselessly been pursuing and traversing new areas of excellence in academics with an enviable success rate in the state as well as in the country. USBM is approved by All India Council for Technical Education (AICTE), Ministry of HRD, Govt. of India and is affiliated to Biju Patnaik University of Technology (BPUT), Govt, of Orissa."
-	                        ),
-	                        "`                    ",
-	                        _react2.default.createElement(
-	                            "button",
-	                            { onClick: this.cournce.bind(this, 10000) },
-	                            "click"
 	                        ),
 	                        _react2.default.createElement(
 	                            "div",
@@ -27267,7 +27274,8 @@
 	                            )
 	                        )
 	                    )
-	                )
+	                ),
+	                _react2.default.createElement("div", { className: "homePageFuture" })
 	            );
 	        }
 	    }]);
@@ -28888,6 +28896,16 @@
 	            return _react2.default.createElement(
 	                "div",
 	                { className: "header" },
+	                _react2.default.createElement(
+	                    "span",
+	                    null,
+	                    _react2.default.createElement("img", { src: "\\uploads\\logo.jpeg", className: "logo", alt: "" }),
+	                    _react2.default.createElement(
+	                        "p",
+	                        null,
+	                        "UNITED SCHOOL OF BUSINESS MAGANENT"
+	                    )
+	                ),
 	                _react2.default.createElement(
 	                    "span",
 	                    { id: "headerSpanHome" },
@@ -39340,6 +39358,67 @@
 	return jQuery;
 	} );
 
+
+/***/ },
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(173);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var NewPage = function (_React$Component) {
+	    _inherits(NewPage, _React$Component);
+
+	    function NewPage() {
+	        _classCallCheck(this, NewPage);
+
+	        return _possibleConstructorReturn(this, (NewPage.__proto__ || Object.getPrototypeOf(NewPage)).call(this));
+	    }
+
+	    _createClass(NewPage, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                null,
+	                _react2.default.createElement(
+	                    "h2",
+	                    null,
+	                    "My new page "
+	                ),
+	                _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: "www.facebook.com" },
+	                    "go to fb"
+	                ),
+	                ">"
+	            );
+	        }
+	    }]);
+
+	    return NewPage;
+	}(_react2.default.Component);
+
+	exports.default = NewPage;
 
 /***/ }
 /******/ ]);
