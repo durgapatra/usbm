@@ -42,13 +42,13 @@ export default class Header extends React.Component {
     render() {
         return (
             <div className="header">
-                 <span>
-                     <img src="\uploads\logo.jpeg" className="logo" alt=""/>
+                     <span>
+                     <img src="\uploads\logo.jpeg" id="logo" alt=""/>
                  </span>
                 <span id="clg-name" className="clg-name-3d">
-                     UNITED SCHOOL OF BUSINESS MANEGENT
+                     UNITED SCHOOL OF BUSINESS MANAGEMENT
                 </span>
-                <span id="headerSpanHome">
+                <span id="headerSpanHome" className="headerItem">
                      <Link to="/">  HOME</Link>
                 </span>
 
@@ -64,12 +64,12 @@ export default class Header extends React.Component {
                      </span>
                 </SubMenu>
 
-                <span id="headerSpanFaculty">
+                <span id="headerSpanFaculty" className="headerItem">
                     <Link to="faculty">FACULTY</Link>
                 </span>
 
                 <SubMenu myLi={this.facilities}>
-                    <span id="headerSpanFacilities">
+                    <span id="headerSpanFacilities" >
                         <Link to="computer-lab">FACILITIES</Link>
                     </span>
                 </SubMenu>
@@ -87,11 +87,11 @@ export default class Header extends React.Component {
                 </SubMenu>
 
 
-                <span id="headerSpanContact">
+                <span id="headerSpanContact" className="headerItem">
                    <Link to="contact-us">CONTACT US</Link>
                 </span>
 
-                <span id="headerSpanLogin">
+                <span id="headerSpanLogin" className="headerItem">
                     <Link to="login">Login</Link>
                 </span>
             </div>

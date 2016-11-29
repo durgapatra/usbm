@@ -27155,8 +27155,10 @@
 
 	        var _this = _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).call(this));
 
+	        _this.myPageOnload = _this.myPageOnload.bind(_this);
+	        _this.loader = false;
 	        _this.state = {
-	            LastNews: ["durga", "manoj", "manas"]
+	            LastNews: []
 	        };
 	        return _this;
 	    }
@@ -27194,37 +27196,56 @@
 	            if (myLenght == 5) {}
 	        }
 	    }, {
+	        key: "componentDidMount",
+	        value: function componentDidMount() {
+	            var _this2 = this;
+
+	            setTimeout(function () {
+	                _this2.loader ? _this2.refs.loadeBar.style.width = 100 + "%" : "";
+	            }, 2000);
+	            setTimeout(function () {
+	                _this2.refs.loadeBar.style.width == 100 + "%" ? _this2.refs.loadeBar.style.display = "none" : '';
+	            }, 4000);
+	        }
+	    }, {
 	        key: "myPageOnload",
-	        value: function myPageOnload() {}
+	        value: function myPageOnload(e) {
+	            console.log(e);
+	            this.loader = true;
+	        }
 	    }, {
 	        key: "render",
 	        value: function render() {
-	            var _this2 = this;
-
 	            return _react2.default.createElement(
 	                "div",
-	                { onLoad: this.myPageOnload() },
+	                { onLoad: this.myPageOnload },
 	                _react2.default.createElement(
 	                    "div",
-	                    { className: "homePage" },
-	                    _react2.default.createElement(
-	                        "div",
-	                        { className: "header_logo_container" },
-	                        _react2.default.createElement(_header2.default, null)
-	                    ),
+	                    { className: "container" },
+	                    _react2.default.createElement(_header2.default, null)
+	                ),
+	                _react2.default.createElement("div", { className: "loaderBar", ref: "loadeBar" }),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "container" },
 	                    _react2.default.createElement(
 	                        "div",
 	                        { className: "profilePhotoContainer" },
-	                        _react2.default.createElement("div", { className: "loaderBar" }),
-	                        _react2.default.createElement("img", { id: "logo", src: "logo.png", alt: "United School of Business Management" }),
+	                        _react2.default.createElement("div", { className: "sideBox" }),
+	                        _react2.default.createElement("img", { src: "uploads/banner.jpg", className: "coverImg", alt: "United School of Business Management" }),
+	                        _react2.default.createElement("div", { className: "sideBox" }),
 	                        _react2.default.createElement("input", { type: "file", name: "profilePhoto", onChange: this.handleProfile.bind(this),
 	                            className: "setProfileBtn" }),
 	                        _react2.default.createElement("img", { src: "", alt: "" })
-	                    ),
-	                    _react2.default.createElement("div", { className: "writeSUB" }),
+	                    )
+	                ),
+	                _react2.default.createElement("div", { className: "writeSUB" }),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "container" },
 	                    _react2.default.createElement(
 	                        "div",
-	                        { className: "container" },
+	                        { className: "body-container" },
 	                        _react2.default.createElement(
 	                            "h1",
 	                            null,
@@ -27244,38 +27265,11 @@
 	                                { className: "float_right" },
 	                                "Our Pride"
 	                            ),
-	                            _react2.default.createElement(
-	                                "div",
-	                                { className: "ourPride" },
-	                                _react2.default.createElement(
-	                                    "ul",
-	                                    null,
-	                                    _react2.default.createElement(
-	                                        _reactMotion.Motion,
-	                                        {
-	                                            defaultStyle: { x: 0 },
-	                                            style: { x: (0, _reactMotion.spring)(1) }
-	                                        },
-	                                        function (styles) {
-	                                            return _react2.default.createElement(
-	                                                "ul",
-	                                                { className: "new", style: { marginBottom: styles.x * 355 } },
-	                                                _this2.state.LastNews.map(function (e, i) {
-	                                                    return _react2.default.createElement(
-	                                                        "li",
-	                                                        { key: i },
-	                                                        e
-	                                                    );
-	                                                })
-	                                            );
-	                                        }
-	                                    )
-	                                )
-	                            )
+	                            _react2.default.createElement("div", { className: "ourPride" })
 	                        )
-	                    )
-	                ),
-	                _react2.default.createElement("div", { className: "homePageFuture" })
+	                    ),
+	                    _react2.default.createElement("div", { className: "homePageFuture" })
+	                )
 	            );
 	        }
 	    }]);
@@ -28899,16 +28893,16 @@
 	                _react2.default.createElement(
 	                    "span",
 	                    null,
-	                    _react2.default.createElement("img", { src: "\\uploads\\logo.jpeg", className: "logo", alt: "" })
+	                    _react2.default.createElement("img", { src: "\\uploads\\logo.jpeg", id: "logo", alt: "" })
 	                ),
 	                _react2.default.createElement(
 	                    "span",
 	                    { id: "clg-name", className: "clg-name-3d" },
-	                    "UNITED SCHOOL OF BUSINESS MANEGENT"
+	                    "UNITED SCHOOL OF BUSINESS MANAGEMENT"
 	                ),
 	                _react2.default.createElement(
 	                    "span",
-	                    { id: "headerSpanHome" },
+	                    { id: "headerSpanHome", className: "headerItem" },
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
 	                        { to: "/" },
@@ -28943,7 +28937,7 @@
 	                ),
 	                _react2.default.createElement(
 	                    "span",
-	                    { id: "headerSpanFaculty" },
+	                    { id: "headerSpanFaculty", className: "headerItem" },
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
 	                        { to: "faculty" },
@@ -28991,7 +28985,7 @@
 	                ),
 	                _react2.default.createElement(
 	                    "span",
-	                    { id: "headerSpanContact" },
+	                    { id: "headerSpanContact", className: "headerItem" },
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
 	                        { to: "contact-us" },
@@ -29000,7 +28994,7 @@
 	                ),
 	                _react2.default.createElement(
 	                    "span",
-	                    { id: "headerSpanLogin" },
+	                    { id: "headerSpanLogin", className: "headerItem" },
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
 	                        { to: "login" },
@@ -29065,27 +29059,31 @@
 	    }, {
 	        key: "handleMouseOut",
 	        value: function handleMouseOut() {
-	            this.state.hover = false;
-	            this.setState(this.state);
+	            var _this2 = this;
+
+	            setTimeout(function () {
+	                _this2.state.hover = false;
+	                _this2.setState(_this2.state);
+	            }, 100);
 	        }
 	    }, {
 	        key: "componentDidMount",
 	        value: function componentDidMount() {
-	            this.subMenu.style.width = this.refs.findWidth.offsetWidth + "px";
-	            this.triangleBox.style.marginLeft = this.refs.findWidth.offsetWidth / 2 - 10 + "px";
+	            this.layer.style.width = this.refs.findWidth.offsetWidth + "px";
+	            //this.triangleBox.style.marginLeft = this.refs.findWidth.offsetWidth / 2-15 + "px";
 	        }
 	    }, {
 	        key: "render",
 	        value: function render() {
-	            var _this2 = this;
+	            var _this3 = this;
 
 	            return _react2.default.createElement(
-	                "b",
-	                { className: "menuContainer", id: "menuContainer",
+	                "span",
+	                { className: "menuContainer",
 	                    onMouseLeave: this.handleMouseOut.bind(this) },
 	                _react2.default.createElement(
-	                    "b",
-	                    { style: { position: "relative" }, ref: "findWidth",
+	                    "span",
+	                    { style: { position: "relative" }, ref: "findWidth", className: "headerItem",
 	                        onMouseOver: this.handleMouseOver.bind(this)
 	                    },
 	                    this.props.children
@@ -29094,28 +29092,31 @@
 	                    _reactMotion.Motion,
 	                    {
 	                        defaultStyle: { x: 0 },
-	                        style: { x: this.state.hover ? (0, _reactMotion.spring)(1, { stiffness: 180, damping: 12 }) : (0, _reactMotion.spring)(0) }
+	                        style: { x: this.state.hover ? (0, _reactMotion.spring)(1, { stiffness: 120, damping: 14 }) : (0, _reactMotion.spring)(0) }
 	                    },
 	                    function (styles) {
 
 	                        return _react2.default.createElement(
-	                            "b",
+	                            "span",
 	                            { style: { transform: "scale(" + styles.x + ")", opacity: styles.x } },
-	                            _react2.default.createElement("b", { className: "triangleBox", ref: function ref(triangleBox) {
-	                                    return _this2.triangleBox = triangleBox;
+	                            _react2.default.createElement("span", { className: "layer", ref: function ref(layer) {
+	                                    return _this3.layer = layer;
+	                                } }),
+	                            _react2.default.createElement("span", { className: "triangleBox", ref: function ref(triangleBox) {
+	                                    return _this3.triangleBox = triangleBox;
 	                                } }),
 	                            _react2.default.createElement(
-	                                "b",
+	                                "span",
 	                                { id: "subMenu", ref: function ref(subMenu) {
-	                                        return _this2.subMenu = subMenu;
+	                                        return _this3.subMenu = subMenu;
 	                                    } },
 	                                _react2.default.createElement(
 	                                    "ul",
 	                                    null,
-	                                    _this2.props.myLi.map(function (e, i) {
+	                                    _this3.props.myLi.map(function (e, i) {
 	                                        return _react2.default.createElement(
 	                                            "li",
-	                                            { onClick: _this2.handleMouseOut.bind(_this2), key: i },
+	                                            { onClick: _this3.handleMouseOut.bind(_this3), key: i },
 	                                            e
 	                                        );
 	                                    })

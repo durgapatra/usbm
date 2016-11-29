@@ -1,32 +1,66 @@
 
 .triangleBox{
-    margin-left: 50%;
+    flex: 1;
+    flex-basis: 48px;
+    flex-grow: 1;
+    flex-shrink: 1;
     border-left:10px solid transparent ;
     border-right:10px solid transparent;
     border-top:10px solid   transparent ;
-    border-bottom:10px solid rgba(17,166,64,0.9) ;
+    border-bottom:10px solid rgba(17,166,64,0.9);
     position:absolute;
-    left: 0;
-    top:21px;
+    left: -100px;
+    top:31px;
     display: block;
+    z-index: 101;
+}
+.layer{
+    flex-basis: 48px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 50px;
+    width: 150px;
+    background-color: transparent;
+    display: inline-block;
+    position: absolute;
+    top: 32px;
+    z-index: 99;
+    left: -131px;
+
 }
 #subMenu{
+    z-index: 100;
+    border-top: 1px solid black;
+    flex: 1;
+    flex-basis: 48px;
+    flex-grow: 1;
+    flex-shrink: 1;
     position: absolute;
    min-width: 0;
     background-color: rgba(17,166,64,0.9);
-    left: 0;
-    top: 41px;
+    left: -132PX;
+    top: 51px;
     color: white;
     height: 18px;
     display: table;
     text-align: center;
     line-height: 22px;
 }
-.menuContainer{
-    position: relative;
-    z-index: 100;
+.menuContainer {
+    flex: 1;
+    flex-basis: 100px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    z-index: 101;
+    height: 100%;
+    width: 100%;
 }
 #subMenu ul{
+    flex: 1;
+    flex-basis: 48px;
+    flex-grow: 1;
+    flex-shrink: 1;
     border-bottom: 1px solid black;
     display:inline-block;
     text-decoration: none;
@@ -35,14 +69,22 @@
     padding: 10px 10px;
 }
 #subMenu ul li{
-    width:200px;
+    flex: 1;
+    flex-basis: 100px;
+    flex-grow: 3;
+    flex-shrink: 1;
     text-align: left;
     position: relative;
     list-style: none;
     display: list-item;
+    width: 200px;
 }
 
 #subMenu ul li  a{
+    flex: 1;
+    flex-basis: 48px;
+    flex-grow: 1;
+    flex-shrink: 1;
     display:block ;
     text-decoration: none;
     color: white;

@@ -5,7 +5,7 @@ export default class SubMenu extends React.Component {
     constructor() {
         super()
         this.state = {
-            hover: false
+            hover:false
         }
     }
 
@@ -15,42 +15,48 @@ export default class SubMenu extends React.Component {
     }
 
     handleMouseOut() {
+        setTimeout(()=>{
             this.state.hover = false;
             this.setState(this.state);
+        },100)
+
     }
     componentDidMount() {
-        this.subMenu.style.width = this.refs.findWidth.offsetWidth + "px";
-        this.triangleBox.style.marginLeft = this.refs.findWidth.offsetWidth / 2 - 10 + "px";
+        this.layer.style.width = this.refs.findWidth.offsetWidth + "px";
+        //this.triangleBox.style.marginLeft = this.refs.findWidth.offsetWidth / 2-15 + "px";
     }
     render() {
         return (
-            <b className="menuContainer" id="menuContainer"
+            <span className="menuContainer"
                         onMouseLeave={this.handleMouseOut.bind(this)}>
-                <b style={{position:"relative"}} ref="findWidth"
+
+                <span style={{position:"relative"}} ref="findWidth" className="headerItem"
                    onMouseOver={this.handleMouseOver.bind(this)}
                 >
                     {this.props.children}
-                </b>
+                </span>
+                
                 <Motion
                     defaultStyle={{x: 0}}
-                    style={{x:this.state.hover?spring(1,{stiffness: 180, damping: 12}):spring(0)}}
+                    style={{x:this.state.hover?spring(1,{stiffness: 120, damping: 14}):spring(0)}}
                 >
                     {(styles)=> {
 
-                        return <b style={{transform:`scale(${styles.x})`,opacity:styles.x}} >
-                            <b className="triangleBox" ref={(triangleBox)=>this.triangleBox=triangleBox}/>
-                            <b id="subMenu" ref={(subMenu)=>this.subMenu=subMenu}>
+                        return <span style={{transform:`scale(${styles.x})`,opacity:styles.x}} >
+                            <span className="layer" ref={(layer)=>this.layer=layer}></span>
+                            <span className="triangleBox" ref={(triangleBox)=>this.triangleBox=triangleBox}/>
+                            <span id="subMenu" ref={(subMenu)=>this.subMenu=subMenu}>
                                 <ul>
                                     {this.props.myLi.map((e, i)=> {
                                         return <li onClick={this.handleMouseOut.bind(this)} key={i} >{e}</li>
                                     })}
                                 </ul>
-                            </b>
-                        </b>
+                            </span>
+                        </span>
                     }}
                 </Motion>
 
-            </b>
+            </span>
 
         )
     }
