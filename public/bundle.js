@@ -27102,13 +27102,35 @@
 
 	var _homePage2 = _interopRequireDefault(_homePage);
 
-	var _newPage = __webpack_require__(255);
+	var _home = __webpack_require__(255);
 
-	var _newPage2 = _interopRequireDefault(_newPage);
+	var _home2 = _interopRequireDefault(_home);
+
+	var _mca = __webpack_require__(256);
+
+	var _mca2 = _interopRequireDefault(_mca);
+
+	var _theInstitute = __webpack_require__(257);
+
+	var _theInstitute2 = _interopRequireDefault(_theInstitute);
+
+	var _visionMission = __webpack_require__(258);
+
+	var _visionMission2 = _interopRequireDefault(_visionMission);
+
+	var _directorMessage = __webpack_require__(259);
+
+	var _directorMessage2 = _interopRequireDefault(_directorMessage);
+
+	var _principleMessage = __webpack_require__(260);
+
+	var _principleMessage2 = _interopRequireDefault(_principleMessage);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var a = [{ path: "/", component: _homePage2.default }, { path: "/new-page", component: _newPage2.default }];
+	var a = [{ path: "/", component: _homePage2.default,
+	    indexRotes: { path: "/home", component: _home2.default },
+	    childRoutes: [{ path: "/home", component: _home2.default }, { path: "the-institute", component: _theInstitute2.default }, { path: "vision-mission", component: _visionMission2.default }, { path: "director-message", component: _directorMessage2.default }, { path: "principle-message", component: _principleMessage2.default }, { path: "mca", component: _mca2.default }] }];
 	exports.default = a;
 
 /***/ },
@@ -27139,6 +27161,10 @@
 
 	var _reactRouter = __webpack_require__(173);
 
+	var _home = __webpack_require__(255);
+
+	var _home2 = _interopRequireDefault(_home);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27164,38 +27190,6 @@
 	    }
 
 	    _createClass(HomePage, [{
-	        key: "handleProfile",
-	        value: function handleProfile(e) {
-	            /*  e.preventDefault();
-	             var file = e.target.files[0];
-	             $.ajax({
-	             url: "profile-upload",
-	             type: "GET",
-	             data:file ,
-	             processData:false,
-	             contentType:false,
-	             success: function (msg) {
-	             console.log(msg)
-	             },
-	             crossDomain:true
-	             });*/
-
-	            _jquery2.default.ajax({
-	                url: "durga",
-	                type: "POST",
-	                data: ""
-	            }).done(function (data) {
-	                console.log(data);
-	            });
-	        }
-	    }, {
-	        key: "cournce",
-	        value: function cournce(number) {
-	            var myLenght = number.toString().length;
-	            console.log(myLenght);
-	            if (myLenght == 5) {}
-	        }
-	    }, {
 	        key: "componentDidMount",
 	        value: function componentDidMount() {
 	            var _this2 = this;
@@ -27209,8 +27203,13 @@
 	        }
 	    }, {
 	        key: "myPageOnload",
-	        value: function myPageOnload(e) {
-	            console.log(e);
+	        value: function myPageOnload() {
+
+	            this.loader = true;
+	        }
+	    }, {
+	        key: "componentDidUpdate",
+	        value: function componentDidUpdate() {
 	            this.loader = true;
 	        }
 	    }, {
@@ -27225,51 +27224,7 @@
 	                    _react2.default.createElement(_header2.default, null)
 	                ),
 	                _react2.default.createElement("div", { className: "loaderBar", ref: "loadeBar" }),
-	                _react2.default.createElement(
-	                    "div",
-	                    { className: "container" },
-	                    _react2.default.createElement(
-	                        "div",
-	                        { className: "profilePhotoContainer" },
-	                        _react2.default.createElement("div", { className: "sideBox" }),
-	                        _react2.default.createElement("img", { src: "uploads/banner.jpg", className: "coverImg", alt: "United School of Business Management" }),
-	                        _react2.default.createElement("div", { className: "sideBox" }),
-	                        _react2.default.createElement("input", { type: "file", name: "profilePhoto", onChange: this.handleProfile.bind(this),
-	                            className: "setProfileBtn" }),
-	                        _react2.default.createElement("img", { src: "", alt: "" })
-	                    )
-	                ),
-	                _react2.default.createElement("div", { className: "writeSUB" }),
-	                _react2.default.createElement(
-	                    "div",
-	                    { className: "container" },
-	                    _react2.default.createElement(
-	                        "div",
-	                        { className: "body-container" },
-	                        _react2.default.createElement(
-	                            "h1",
-	                            null,
-	                            "USBM AT A GLANCE"
-	                        ),
-	                        _react2.default.createElement(
-	                            "p",
-	                            { className: "float_left  ", style: { display: "block" } },
-	                            _react2.default.createElement("img", { className: "float_left", src: "\\uploads\\collage-images.jpg", alt: "" }),
-	                            "United School of Business Management (USBM) is conveniently located in the heart of Bhubaneswar, the capital city of Orissa which is blended with ancient and modern Indian culture. USBM is established with an initiative and support from some of the leading academicians, industrialists and business houses. Within a short span, it has revolutionised the concept of professional MBA & MCA training. It has ceaselessly been pursuing and traversing new areas of excellence in academics with an enviable success rate in the state as well as in the country. USBM is approved by All India Council for Technical Education (AICTE), Ministry of HRD, Govt. of India and is affiliated to Biju Patnaik University of Technology (BPUT), Govt, of Orissa."
-	                        ),
-	                        _react2.default.createElement(
-	                            "div",
-	                            null,
-	                            _react2.default.createElement(
-	                                "h1",
-	                                { className: "float_right" },
-	                                "Our Pride"
-	                            ),
-	                            _react2.default.createElement("div", { className: "ourPride" })
-	                        )
-	                    ),
-	                    _react2.default.createElement("div", { className: "homePageFuture" })
-	                )
+	                this.props.children || _react2.default.createElement(_home2.default, null)
 	            );
 	        }
 	    }]);
@@ -28794,7 +28749,7 @@
 	            "Vision mission"
 	        ), _react2.default.createElement(
 	            _reactRouter.Link,
-	            { to: "Director-message" },
+	            { to: "director-message" },
 	            "Director Message"
 	        ), _react2.default.createElement(
 	            _reactRouter.Link,
@@ -28905,8 +28860,8 @@
 	                    { id: "headerSpanHome", className: "headerItem" },
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: "/" },
-	                        "  HOME"
+	                        { to: "/home" },
+	                        " HOME"
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -29070,7 +29025,7 @@
 	        key: "componentDidMount",
 	        value: function componentDidMount() {
 	            this.layer.style.width = this.refs.findWidth.offsetWidth + "px";
-	            //this.triangleBox.style.marginLeft = this.refs.findWidth.offsetWidth / 2-15 + "px";
+	            this.triangleBox.style.marginLeft = this.refs.findWidth.offsetWidth / 4 + "px";
 	        }
 	    }, {
 	        key: "render",
@@ -39376,7 +39331,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(173);
+	var _jquery = __webpack_require__(254);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39386,40 +39343,550 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var NewPage = function (_React$Component) {
-	    _inherits(NewPage, _React$Component);
+	var Home = function (_React$Component) {
+	    _inherits(Home, _React$Component);
 
-	    function NewPage() {
-	        _classCallCheck(this, NewPage);
+	    function Home() {
+	        _classCallCheck(this, Home);
 
-	        return _possibleConstructorReturn(this, (NewPage.__proto__ || Object.getPrototypeOf(NewPage)).call(this));
+	        var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this));
+
+	        _this.state = {
+	            changePhoto: false,
+	            countNo: 0,
+	            profilePhotos: [{ dp: true }, { dp: false }, { dp: false }, { dp: false }]
+	        };
+
+	        return _this;
 	    }
 
-	    _createClass(NewPage, [{
+	    _createClass(Home, [{
+	        key: "profileDOt",
+	        value: function profileDOt(index) {
+	            for (var i = 0; i < this.state.profilePhotos.length; i++) {
+	                this.state.profilePhotos[i] = { dp: false };
+	            }
+	            this.state.profilePhotos[index] = { dp: true };
+	            this.setState(this.state);
+	            this.state.countNo = index;
+	        }
+	    }, {
+	        key: "componentDidMount",
+	        value: function componentDidMount() {
+	            var _this2 = this;
+
+	            this.fuse = setInterval(function () {
+	                _this2.profileDOt(_this2.state.countNo);
+	                if (_this2.state.countNo < _this2.state.profilePhotos.length - 1) {
+	                    _this2.state.countNo++;
+	                } else _this2.state.countNo = 0;
+	            }, 3000);
+	        }
+	    }, {
+	        key: "componentWillUnmount",
+	        value: function componentWillUnmount() {
+	            clearInterval(this.fuse);
+	        }
+	    }, {
+	        key: "leftProfileImg",
+	        value: function leftProfileImg(index) {
+	            if (index == 0) {
+	                this.profileDOt(this.state.profilePhotos.length - 1);
+	            } else {
+	                this.profileDOt(index - 1);
+	            }
+	            this.setState(this.state);
+	        }
+	    }, {
+	        key: "rightProfileImg",
+	        value: function rightProfileImg(index) {
+	            if (index == this.state.profilePhotos.length - 1) {
+	                this.profileDOt(0);
+	            } else {
+	                this.profileDOt(index + 1);
+	            }
+	            this.setState(this.state);
+	        }
+	    }, {
+	        key: "mouseOver",
+	        value: function mouseOver() {
+	            this.state.changePhoto = true;
+	        }
+	    }, {
+	        key: "mouseLeave",
+	        value: function mouseLeave() {
+	            this.state.changePhoto = true;
+	        }
+	    }, {
+	        key: "handleProfile",
+	        value: function handleProfile(e) {
+	            /*  e.preventDefault();
+	             var file = e.target.files[0];
+	             $.ajax({
+	             url: "profile-upload",
+	             type: "GET",
+	             data:file ,
+	             processData:false,
+	             contentType:false,
+	             success: function (msg) {
+	             console.log(msg)
+	             },
+	             crossDomain:true
+	             });*/
+	            /*
+	             $.ajax({
+	             url: "durga",
+	             type: "POST",
+	             data: ""
+	             }).done((data)=> {
+	             console.log(data)
+	             })
+	             }
+	               cournce(number) {
+	             var myLenght = number.toString().length;
+	             console.log(myLenght)
+	             if (myLenght == 5) {
+	               }*/
+
+	        }
+	    }, {
+	        key: "render",
+	        value: function render() {
+	            var _this3 = this;
+
+	            console.log(this.state.changePhoto);
+	            var myPhoto = this.state.profilePhotos.map(function (e, i) {
+	                return _react2.default.createElement("img", { src: "uploads/" + i + ".jpg",
+	                    key: i,
+	                    style: e.dp ? { display: "block" } : null,
+	                    className: "coverImg", alt: "" });
+	            });
+	            return _react2.default.createElement(
+	                "div",
+	                null,
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "container" },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "profilePhotoContainer" },
+	                        _react2.default.createElement("div", { className: "sideBox" }),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { style: { position: "absolute", zIndex: 100, marginTop: 300, marginLeft: 45 + "%" } },
+	                            this.state.profilePhotos.map(function (e, i) {
+	                                return _react2.default.createElement(
+	                                    "span",
+	                                    { key: i, className: "dpDot", style: e.dp ? { background: "black" } : {},
+	                                        onClick: _this3.profileDOt.bind(_this3, i), "aria-hidden": "true" },
+	                                    i + 1
+	                                );
+	                            })
+	                        ),
+	                        _react2.default.createElement(
+	                            "span",
+	                            null,
+	                            _react2.default.createElement("i", { className: "fa fa-chevron-circle-left  leftProfileBtn fa-4x",
+	                                onClick: this.leftProfileImg.bind(this, this.state.countNo), "aria-hidden": "true" })
+	                        ),
+	                        myPhoto,
+	                        _react2.default.createElement(
+	                            "span",
+	                            null,
+	                            _react2.default.createElement("i", { className: "fa fa-chevron-circle-right rightProfileBtn fa-4x",
+	                                onClick: this.rightProfileImg.bind(this, this.state.countNo),
+	                                "aria-hidden": "true" })
+	                        ),
+	                        _react2.default.createElement("div", { className: "sideBox" }),
+	                        _react2.default.createElement(
+	                            "div",
+	                            { className: "fileUpload" },
+	                            _react2.default.createElement(
+	                                "span",
+	                                null,
+	                                _react2.default.createElement("i", { className: "fa fa-camera", "aria-hidden": "true" })
+	                            ),
+	                            _react2.default.createElement("input", { type: "file", className: "upload" }),
+	                            _react2.default.createElement(
+	                                "span",
+	                                { className: "changeCoverPhotoSpan" },
+	                                "Updata Couer Photo"
+	                            )
+	                        ),
+	                        _react2.default.createElement("img", { src: "", alt: "" })
+	                    )
+	                ),
+	                _react2.default.createElement("div", { className: "writeSUB" }),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "container" },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "body-container" },
+	                        _react2.default.createElement(
+	                            "h1",
+	                            null,
+	                            "USBM AT A GLANCE"
+	                        ),
+	                        _react2.default.createElement(
+	                            "p",
+	                            { className: "float_left  ", style: { display: "block" } },
+	                            _react2.default.createElement("img", { className: "float_left", src: "\\uploads\\collage-images.jpg", alt: "" }),
+	                            "United School of Business Management (USBM) is conveniently located in the heart of Bhubaneswar, the capital city of Orissa which is blended with ancient and modern Indian culture. USBM is established with an initiative and support from some of the leading academicians, industrialists and business houses. Within a short span, it has revolutionised the concept of professional MBA & MCA training. It has ceaselessly been pursuing and traversing new areas of excellence in academics with an enviable success rate in the state as well as in the country. USBM is approved by All India Council for Technical Education (AICTE), Ministry of HRD, Govt. of India and is affiliated to Biju Patnaik University of Technology (BPUT), Govt, of Orissa."
+	                        ),
+	                        _react2.default.createElement(
+	                            "div",
+	                            null,
+	                            _react2.default.createElement(
+	                                "h1",
+	                                { className: "float_right" },
+	                                "Our Pride"
+	                            ),
+	                            _react2.default.createElement("div", { className: "ourPride" })
+	                        )
+	                    ),
+	                    _react2.default.createElement("div", { className: "homePageFuture" })
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Home;
+	}(_react2.default.Component);
+
+	exports.default = Home;
+
+/***/ },
+/* 256 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Mca = function (_React$Component) {
+	    _inherits(Mca, _React$Component);
+
+	    function Mca() {
+	        _classCallCheck(this, Mca);
+
+	        return _possibleConstructorReturn(this, (Mca.__proto__ || Object.getPrototypeOf(Mca)).call(this));
+	    }
+
+	    _createClass(Mca, [{
 	        key: "render",
 	        value: function render() {
 	            return _react2.default.createElement(
 	                "div",
 	                null,
 	                _react2.default.createElement(
-	                    "h2",
+	                    "h1",
 	                    null,
-	                    "My new page "
-	                ),
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: "www.facebook.com" },
-	                    "go to fb"
-	                ),
-	                ">"
+	                    "this is mca page"
+	                )
 	            );
 	        }
 	    }]);
 
-	    return NewPage;
+	    return Mca;
 	}(_react2.default.Component);
 
-	exports.default = NewPage;
+	exports.default = Mca;
+
+/***/ },
+/* 257 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var TheInstitute = function (_React$Component) {
+	    _inherits(TheInstitute, _React$Component);
+
+	    function TheInstitute() {
+	        _classCallCheck(this, TheInstitute);
+
+	        return _possibleConstructorReturn(this, (TheInstitute.__proto__ || Object.getPrototypeOf(TheInstitute)).call(this));
+	    }
+
+	    _createClass(TheInstitute, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                null,
+	                _react2.default.createElement(
+	                    "h1",
+	                    null,
+	                    "The Institute"
+	                ),
+	                _react2.default.createElement("img", { src: "college_campus3.jpg", alt: "" }),
+	                _react2.default.createElement(
+	                    "p",
+	                    null,
+	                    "United School of Business Management (USBM) is conveniently located in the heart of Bhubaneswar, the capital city of Orissa which is blended with ancient and modern Indian culture. USBM is established with an initiative and support from some of the leading academicians, industrialists and business houses. Within a short span it has revolutionised the concept of professional MBA & MCA training. It has ceaselessly been pursuing and traversing new areas\xA0of excellence in academics with an enviable success rate in the state as well as in the country."
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    null,
+	                    "USBM is approved by All India Council for Technical Education (AICTE), Ministry of HRD, Govt. of India and is affiliated to Biju Patnaik University of Technology (BPUT), Govt, of Odisha."
+	                )
+	            );
+	        }
+	    }]);
+
+	    return TheInstitute;
+	}(_react2.default.Component);
+
+	exports.default = TheInstitute;
+
+/***/ },
+/* 258 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var VisionMission = function (_React$Component) {
+	    _inherits(VisionMission, _React$Component);
+
+	    function VisionMission() {
+	        _classCallCheck(this, VisionMission);
+
+	        return _possibleConstructorReturn(this, (VisionMission.__proto__ || Object.getPrototypeOf(VisionMission)).call(this));
+	    }
+
+	    _createClass(VisionMission, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                null,
+	                _react2.default.createElement(
+	                    "h1",
+	                    null,
+	                    "Vision Mission"
+	                ),
+	                _react2.default.createElement("img", { src: "vision_mission.jpg", alt: "" }),
+	                _react2.default.createElement(
+	                    "h2",
+	                    null,
+	                    "Vision"
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    null,
+	                    "To contribute to the growth of the corporate sector and thus the society by producing a pool of efficient human resources and by promoting innovation and excellence in managerial education."
+	                ),
+	                _react2.default.createElement(
+	                    "h2",
+	                    null,
+	                    "Mission"
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    null,
+	                    "To foster talents so as to make them understand the global dimensions of business, gain professional competencies through interpersonal skills, critical thinking, creativity, leadership abilities, research, and entrepreneurship in an environment which promotes core human values while creating ample opportunities for their growth and development."
+	                )
+	            );
+	        }
+	    }]);
+
+	    return VisionMission;
+	}(_react2.default.Component);
+
+	exports.default = VisionMission;
+
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var DirectorMessage = function (_React$Component) {
+	    _inherits(DirectorMessage, _React$Component);
+
+	    function DirectorMessage() {
+	        _classCallCheck(this, DirectorMessage);
+
+	        return _possibleConstructorReturn(this, (DirectorMessage.__proto__ || Object.getPrototypeOf(DirectorMessage)).call(this));
+	    }
+
+	    _createClass(DirectorMessage, [{
+	        key: "render",
+	        value: function render() {
+	            return _react2.default.createElement(
+	                "div",
+	                null,
+	                _react2.default.createElement(
+	                    "h1",
+	                    null,
+	                    "Director Message"
+	                ),
+	                _react2.default.createElement("img", { src: "director.jpg", alt: "" }),
+	                _react2.default.createElement(
+	                    "p",
+	                    null,
+	                    "India is undergoing a process of evolution both socially and economically. Rapid globalization and competitive markets make it imperative to align management education, to effectively meet the dynamics of the corporate challenges. With the growing awareness about the complexity of modern business; the demand for management students, with a high level of domain knowledge and core competencies is fast increasing. In this mind extension era, students should be fully equipped to lay the foundation of a new beginning. Efficient human resources have always been the strength of the evolving India where ideas and dreams have consistently contributed to the exploration of the unexplored. USBM, a flourishing centre of excellence in management and technical education, provides the platform for the realisation of dreams. Here, we believe in efficiency, quality, and creativity. USBM invites those aspiring minds who dream it big and want to leave their marks for the future generations."
+	                )
+	            );
+	        }
+	    }]);
+
+	    return DirectorMessage;
+	}(_react2.default.Component);
+
+	exports.default = DirectorMessage;
+
+/***/ },
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PrincipleMessage = function (_React$Component) {
+	    _inherits(PrincipleMessage, _React$Component);
+
+	    function PrincipleMessage() {
+	        _classCallCheck(this, PrincipleMessage);
+
+	        var _this = _possibleConstructorReturn(this, (PrincipleMessage.__proto__ || Object.getPrototypeOf(PrincipleMessage)).call(this));
+
+	        _this.state = {
+	            allText: [],
+	            editText: false
+	        };
+	        return _this;
+	    }
+
+	    _createClass(PrincipleMessage, [{
+	        key: "getEdit",
+	        value: function getEdit() {
+	            this.state.editText = true;
+	            this.setState(this.state);
+	        }
+	    }, {
+	        key: "getSave",
+	        value: function getSave() {
+	            this.state.allText.push(this.refs.inpValue.value);
+
+	            this.setState(this.state);
+	        }
+	    }, {
+	        key: "componentDidMount",
+	        value: function componentDidMount() {}
+	    }, {
+	        key: "render",
+	        value: function render() {
+
+	            return _react2.default.createElement(
+	                "div",
+	                null,
+	                _react2.default.createElement(
+	                    "h1",
+	                    null,
+	                    "Principle Message"
+	                ),
+	                _react2.default.createElement("img", { src: "prinicpal2.jpg", alt: "" }),
+	                _react2.default.createElement(
+	                    "p",
+	                    null,
+	                    "  This is a technology-cum-knowledge century where people are technology-savvy, knowledgeable, and have a relatively better understanding of the global issues than their predecessors. In the current emerging, dynamic, and progressive environment, the management field is predicted to be highly proactive, and automated. In the contemporary environment, strategic thinking and strategic actions combined with administrative and operational efficiency have become indispensable. In this context, USBM was established to cater to the needs of the future managers and technocrats who will provide leadership to the society. Innovative teaching methodology, experienced faculty, a well-structured industry interface, a fully integrated contemporary campus- all contribute to"
+	                )
+	            );
+	        }
+	    }]);
+
+	    return PrincipleMessage;
+	}(_react2.default.Component);
+
+	exports.default = PrincipleMessage;
 
 /***/ }
 /******/ ]);

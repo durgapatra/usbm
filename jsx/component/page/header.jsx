@@ -6,9 +6,10 @@ export default class Header extends React.Component {
     constructor() {
         super()
         this.strate = {}
-        this.aboutMenu = [<Link to="the-institute">The institute</Link>,
+        this.aboutMenu = [
+            <Link to="the-institute">The institute</Link>,
             <Link to="vision-mission">Vision mission</Link>,
-            <Link to="Director-message">Director Message</Link>,
+            <Link to="director-message">Director Message</Link>,
             <Link to="principle-message">Principal'S Message</Link>
         ]
         this.courses = [<Link to="mba">MBA</Link>,
@@ -49,7 +50,7 @@ export default class Header extends React.Component {
                      UNITED SCHOOL OF BUSINESS MANAGEMENT
                 </span>
                 <span id="headerSpanHome" className="headerItem">
-                     <Link to="/">  HOME</Link>
+                     <Link to="/home"> HOME</Link>
                 </span>
 
                 <SubMenu myLi={this.aboutMenu}>

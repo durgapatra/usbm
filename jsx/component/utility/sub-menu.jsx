@@ -23,7 +23,7 @@ export default class SubMenu extends React.Component {
     }
     componentDidMount() {
         this.layer.style.width = this.refs.findWidth.offsetWidth + "px";
-        //this.triangleBox.style.marginLeft = this.refs.findWidth.offsetWidth / 2-15 + "px";
+        this.triangleBox.style.marginLeft = this.refs.findWidth.offsetWidth / 4 + "px";
     }
     render() {
         return (

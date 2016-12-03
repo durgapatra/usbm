@@ -3,6 +3,7 @@ import {spring, Motion} from "react-motion";
 import Header from "./header";
 import $ from  "jquery";
 import {Link} from "react-router";
+import Home from  "../page-container/home";
 export default class HomePage extends React.Component {
     constructor() {
         super()
@@ -13,38 +14,6 @@ export default class HomePage extends React.Component {
         }
     }
 
-    handleProfile(e) {
-        /*  e.preventDefault();
-         var file = e.target.files[0];
-         $.ajax({
-         url: "profile-upload",
-         type: "GET",
-         data:file ,
-         processData:false,
-         contentType:false,
-         success: function (msg) {
-         console.log(msg)
-         },
-         crossDomain:true
-         });*/
-
-        $.ajax({
-            url: "durga",
-            type: "POST",
-            data: ""
-        }).done((data)=> {
-            console.log(data)
-        })
-    }
-
-    cournce(number) {
-        var myLenght = number.toString().length;
-        console.log(myLenght)
-        if (myLenght == 5) {
-
-        }
-
-    }
 
     componentDidMount() {
         setTimeout(()=> {
@@ -56,11 +25,14 @@ export default class HomePage extends React.Component {
         }, 4000)
     }
 
-    myPageOnload(e) {
-        console.log(e)
+    myPageOnload() {
+
         this.loader = true;
     }
+    componentDidUpdate(){
+        this.loader=true;
 
+    }
     render() {
         return (
             <div onLoad={this.myPageOnload}>
@@ -68,43 +40,7 @@ export default class HomePage extends React.Component {
                     <Header></Header>
                 </div>
                 <div className="loaderBar" ref="loadeBar"></div>
-                <div className="container">
-                    <div className="profilePhotoContainer">
-                        <div className="sideBox"></div>
-                        <img src="uploads/banner.jpg" className="coverImg" alt="United School of Business Management"/>
-                        <div className="sideBox"></div>
-                        <input type="file" name="profilePhoto" onChange={this.handleProfile.bind(this)}
-                               className="setProfileBtn"/>
-                        <img src="" alt=""/>
-                    </div>
-                </div>
-                <div className="writeSUB">
-                </div>
-                <div className="container">
-                    <div className="body-container">
-                        <h1>USBM AT A GLANCE</h1>
-                        <p className="float_left  " style={{display:"block"}}>
-                            <img className="float_left" src="\uploads\collage-images.jpg" alt=""/>
-                            United School of Business Management (USBM) is conveniently located in
-                            the heart of Bhubaneswar, the capital city of Orissa which is blended
-                            with ancient and modern Indian culture. USBM is established with an
-                            initiative and support from some of the leading academicians,
-                            industrialists and business houses. Within a short span, it has
-                            revolutionised the concept of professional MBA &amp; MCA training.
-                            It has ceaselessly been pursuing and traversing new areas of excellence
-                            in academics with an enviable success rate in the state as well as in
-                            the country. USBM is approved by All India Council for Technical
-                            Education (AICTE), Ministry of HRD, Govt. of India and is affiliated
-                            to Biju Patnaik University of Technology (BPUT), Govt, of Orissa.
-                        </p>
-                        <div>
-                            <h1 className="float_right">Our Pride</h1>
-                            <div className="ourPride">
-                            </div>
-                        </div>
-                    </div>
-                    <div className="homePageFuture"></div>
-                </div>
+                {this.props.children || <Home/>}
             </div>
 
         )

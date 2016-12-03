@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 5px;
     padding: 0;
     z-index: 50;
 }
@@ -12,11 +12,6 @@ body {
     margin: 0 auto;
     min-height: 800px;
     z-index: 98;
-}
-
-#logo {
-    width: 550px;
-    margin: 20px 0 20px 185px;
 }
 
 .header {
@@ -52,12 +47,12 @@ body {
     flex-shrink: 1;
     height: 48px;
     width: 48px;
-    padding: 0;
-    margin: 0;
     display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
+    margin:5px 0 0 5px;
+    background-color: white;
 }
 
 .clg-name-3d {
@@ -152,14 +147,64 @@ body {
 .coverImg {
     height: 350px;
     width: 100%;
+    display: none;
+    animation-name: setCoverImg;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
 }
-.setProfileBtn {
-    margin: 200px 0 0 20px;
-    text-decoration: none;
-    background-color: #0a6565;
+@keyframes setCoverImg{
+   to{opacity: 1}
+    from{opacity: 0}
+}
+.fileUpload {
+    top: 330px;
+    left: 15px;
+    overflow: hidden;
+    position: absolute;
+}
+.fileUpload  [type=file] {
+    cursor: inherit;
+    display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+}
+.changeCoverPhotoSpan{
+    background-color: inherit;
+    margin-left: 1px;
+    height: 16px;
+    text-align: center;
+}
+.leftProfileBtn{
+   position: absolute;
+    top: 111px;
+    left: 2%;
+    z-index: 100;
+}
+.rightProfileBtn{
+    position: absolute;
+    top: 111px;
+    left:94%;
+   z-index: 100;
+}
+.dpDot{
+    height: 13px;
+    width: 13px;
+    background-color: rgb(225, 225, 225);
+    border-radius: 50%;
     display: inline-block;
+    margin:15px 0 0 10px ;
+    z-index: 101;
+    color: #e1e1e1;
+    font-size: 14px;
+    text-align: center;
 }
-
 .writeSUB {
     flex: 1;
     flex-basis: 100%;

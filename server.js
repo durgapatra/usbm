@@ -16,7 +16,7 @@ var upload=multer({
 
 
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
     res.render("home");
 });
 app.post('/profile-upload', function(req, res) {
