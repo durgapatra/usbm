@@ -3,6 +3,33 @@ import React from "react";
 export default class VisionMission extends React.Component {
     constructor() {
         super()
+        this.allText = "To contribute to the growth of the corporate sector and thus the society by producing a pool ofefficient human resources and by promoting innovation and excellence in managerialeducation."
+        this.allText2="To foster talents so as to make them understand the global dimensions of business, gain professionalcompetencies through interpersonal skills, critical thinking, creativity, leadership abilities,research, and entrepreneurship in an environment which promotes core human values while creatingample opportunities for their growth and development."
+        this.state = {
+            editText: false,
+            editText2: false
+        }
+    }
+
+    getEdit() {
+        this.state.editText = !this.state.editText;
+        this.setState(this.state);
+        this.state.editText ? "" : this.refs.textBox.readOnly = true;
+    }
+
+    getSave() {
+        this.allText=this.refs.textBox.value;
+
+    }
+    getEdit2() {
+        this.state.editText2 = !this.state.editText2;
+        this.setState(this.state);
+        this.state.editText2 ? "" : this.refs.textBox2.readOnly = true;
+    }
+
+    getSave2() {
+        this.allText2=this.refs.textBox2.value;
+
     }
 
     render() {
@@ -11,17 +38,34 @@ export default class VisionMission extends React.Component {
                 <h1>Vision Mission</h1>
                 <img src="vision_mission.jpg" alt=""/>
                 <h2>Vision</h2>
-                <p>
-                    To contribute to the growth of the corporate sector and thus the society by producing a pool of
-                    efficient human resources and by promoting innovation and excellence in managerial
-                    education.
-                </p>
+                <button className="EditSaveBtn" onClick={this.getEdit.bind(this)}>{this.state.editText ? "Save" : "EditText"}</button>
+
+                {this.state.editText ? <textarea
+                    ref="textBox"
+                    style={{width:"100%",height:"300px",
+                  border: "2px solid whi",
+                  borderRadius: "4px",
+                 backgroundColor: "#f8f8f8",
+                 fontSize:"16px",
+                         resize:"none"}}
+                    onMouseOut={this.getSave.bind(this)}
+                    defaultValue={this.allText}
+                ></textarea> : <p>{this.allText}</p>}
                 <h2>Mission</h2>
-                <p>To foster talents so as to make them understand the global dimensions of business, gain professional
-                    competencies through interpersonal skills, critical thinking, creativity, leadership abilities,
-                    research, and entrepreneurship in an environment which promotes core human values while creating
-                    ample opportunities for their growth and development.
-                </p>
+                <button className="EditSaveBtn" onClick={this.getEdit2.bind(this)}>{this.state.editText2 ? "Save" : "EditText"}</button>
+
+                {this.state.editText2 ? <textarea
+                    ref="textBox2"
+                    style={{width:"100%",height:"300px",
+                  border: "2px solid whi",
+                  borderRadius: "4px",
+                 backgroundColor: "#f8f8f8",
+                 fontSize:"16px",
+                         resize:"none"}}
+                    onMouseOut={this.getSave2.bind(this)}
+                    defaultValue={this.allText2}
+                ></textarea> : <p>{this.allText2}</p>}
+
             </div>
         )
     }

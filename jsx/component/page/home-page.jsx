@@ -29,10 +29,12 @@ export default class HomePage extends React.Component {
 
         this.loader = true;
     }
-    componentDidUpdate(){
-        this.loader=true;
+
+    componentDidUpdate() {
+        this.loader = true;
 
     }
+
     render() {
         return (
             <div onLoad={this.myPageOnload}>
@@ -40,7 +42,9 @@ export default class HomePage extends React.Component {
                     <Header></Header>
                 </div>
                 <div className="loaderBar" ref="loadeBar"></div>
-                {this.props.children || <Home/>}
+                <div style={{width:"1350px",margin:"0 auto 0 auto"}}>
+                    {this.props.children || <Home/>}
+                </div>
             </div>
 
         )
