@@ -50,50 +50,50 @@ export default class Header extends React.Component {
                      UNITED SCHOOL OF BUSINESS MANAGEMENT
                 </span>
                 <span id="headerSpanHome" className="headerItem">
-                     <Link to="/home"> HOME</Link>
+                     <Link className="my_a" to="/home"> HOME</Link>
                 </span>
 
-                <SubMenu myLi={this.aboutMenu}>
-                         <span id="headerSpanAbout" ref="about">
-                             <Link to="the-institute">ABOUT USBM</Link>
+                <SubMenu myLi={this.aboutMenu} >
+                         <span id="headerSpanAbout" ref="about" className="my_a">
+                          ABOUT USBM
                          </span>
                 </SubMenu>
 
                 <SubMenu myLi={this.courses}>
-                     <span id="headerSpanCourses">
-                         <Link to="courses">COURSES</Link>
+                     <span id="headerSpanCourses" className="my_a">
+                        COURSES
                      </span>
                 </SubMenu>
 
                 <span id="headerSpanFaculty" className="headerItem">
-                    <Link to="faculty">FACULTY</Link>
+                    <Link className="my_a" to="faculty">FACULTY</Link>
                 </span>
 
                 <SubMenu myLi={this.facilities}>
-                    <span id="headerSpanFacilities" >
-                        <Link to="computer-lab">FACILITIES</Link>
+                    <span id="headerSpanFacilities" className="my_a">
+                        FACILITIES
                     </span>
                 </SubMenu>
 
                 <SubMenu myLi={this.map}>
-                    <span id="headerSpanMap">
-                        <Link to="college-map">Map</Link>
+                    <span id="headerSpanMap" className="my_a">
+                       Map
                     </span>
                 </SubMenu>
 
-                <SubMenu myLi={this.others}>
-                    <span id="headerSpanOther">
-                        <Link to="admission">OTHERS</Link>
+                <SubMenu myLi={this.others} className="my_a">
+                    <span id="headerSpanOther" className="my_a">
+                       OTHERS
                     </span>
                 </SubMenu>
 
 
                 <span id="headerSpanContact" className="headerItem">
-                   <Link to="contact-us">CONTACT US</Link>
+                   <Link className="my_a" to="contact-us">CONTACT US</Link>
                 </span>
 
                 <span id="headerSpanLogin" className="headerItem">
-                    <Link to="login">Login</Link>
+                    <Link className="my_a" to="login">Login</Link>
                 </span>
             </div>
         )

@@ -16,20 +16,30 @@ export default class TheInstitute extends React.Component {
     }
 
     getSave() {
-        this.allText=this.refs.textBox.value;
+        this.allText = this.refs.textBox.value;
 
     }
 
     render() {
         return (
-            <div>
+            <div style={{marginLeft:"10px"}}>
                 <h1>The Institute</h1>
-                <img src="college_campus3.jpg" alt=""/>
-                <button className="EditSaveBtn" onClick={this.getEdit.bind(this)}>{this.state.editText ? "Save" : "EditText"}</button>
+                <div className="facultyImgContainer">
+                    <img src="college_campus3.jpg" className="facultyImg" alt=""/>
 
+                    <div className="photoFacultyUpload">
+                        <span><i className="fa fa-camera" aria-hidden="true"></i></span>
+                        <input type="file" className="upload"/>
+                        <span className="changePhotoSpan">Updata Photo</span>
+                    </div>
+                </div>
+                <div className="EditSaveBtnContainer">
+                <button className="EditSaveBtn"
+                        onClick={this.getEdit.bind(this)}>{this.state.editText ? "Save" : "EditText"}</button>
+                </div>
                 {this.state.editText ? <textarea
                     ref="textBox"
-                    style={{width:"100%",height:"300px",
+                    style={{width:"1300px",height:"300px",
                   border: "2px solid whi",
                   borderRadius: "4px",
                  backgroundColor: "#f8f8f8",

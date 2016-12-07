@@ -30,7 +30,7 @@ export default class SubMenu extends React.Component {
             <span className="menuContainer"
                         onMouseLeave={this.handleMouseOut.bind(this)}>
 
-                <span style={{position:"relative"}} ref="findWidth" className="headerItem"
+                <span style={{position:"relative"}} ref="findWidth" className="headerItem" style={{color:"white"}}
                    onMouseOver={this.handleMouseOver.bind(this)}
                 >
                     {this.props.children}
@@ -48,7 +48,7 @@ export default class SubMenu extends React.Component {
                             <span id="subMenu" ref={(subMenu)=>this.subMenu=subMenu}>
                                 <ul>
                                     {this.props.myLi.map((e, i)=> {
-                                        return <li onClick={this.handleMouseOut.bind(this)} key={i} >{e}</li>
+                                        return <li onClick={this.handleMouseOut.bind(this)} key={i}   >{e}</li>
                                     })}
                                 </ul>
                             </span>

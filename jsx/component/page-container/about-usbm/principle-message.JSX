@@ -16,29 +16,42 @@ export default class PrincipleMessage extends React.Component {
     }
 
     getSave() {
-        this.allText=this.refs.textBox.value;
+        this.allText = this.refs.textBox.value;
 
     }
+
     render() {
 
         return (
-            <div>
+            <div style={{marginLeft:"10px",}}>
                 <h1>Principle Message</h1>
-                <img src="prinicpal2.jpg" alt=""/>
-                <button className="EditSaveBtn" onClick={this.getEdit.bind(this)}>{this.state.editText ? "Save" : "EditText"}</button>
+                <div className="facultyImgContainer">
+                    <img src="prinicpal2.jpg" className="facultyImg" alt=""/>
 
-                    {this.state.editText ? <textarea
-                        ref="textBox"
-                        style={{width:"100%",height:"300px",
+                    <div className="photoFacultyUpload">
+                        <span><i className="fa fa-camera" aria-hidden="true"></i></span>
+                        <input type="file" className="upload"/>
+                        <span className="changePhotoSpan">Updata Photo</span>
+                    </div>
+                </div>
+
+                <div className="EditSaveBtnContainer">
+                    <button className="EditSaveBtn"
+                            onClick={this.getEdit.bind(this)}>{this.state.editText ? "Save" : "EditText"}</button>
+                </div>
+
+                {this.state.editText ? <textarea
+                    ref="textBox"
+                    style={{width:"1300px",height:"300px",
                   border: "2px solid whi",
                   borderRadius: "4px",
                  backgroundColor: "#f8f8f8",
                  fontSize:"16px",
-                         resize:"none"}}
-                        onMouseOut={this.getSave.bind(this)}
-                        defaultValue={this.allText}
-                    ></textarea> : <p>{this.allText}</p>}
-                
+                 resize:"none"}}
+                    onMouseOut={this.getSave.bind(this)}
+                    defaultValue={this.allText}
+                ></textarea> : <p>{this.allText}</p>}
+
 
             </div>
         )

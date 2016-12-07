@@ -28872,7 +28872,7 @@
 	                    { id: "headerSpanHome", className: "headerItem" },
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: "/home" },
+	                        { className: "my_a", to: "/home" },
 	                        " HOME"
 	                    )
 	                ),
@@ -28881,12 +28881,8 @@
 	                    { myLi: this.aboutMenu },
 	                    _react2.default.createElement(
 	                        "span",
-	                        { id: "headerSpanAbout", ref: "about" },
-	                        _react2.default.createElement(
-	                            _reactRouter.Link,
-	                            { to: "the-institute" },
-	                            "ABOUT USBM"
-	                        )
+	                        { id: "headerSpanAbout", ref: "about", className: "my_a" },
+	                        "ABOUT USBM"
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -28894,12 +28890,8 @@
 	                    { myLi: this.courses },
 	                    _react2.default.createElement(
 	                        "span",
-	                        { id: "headerSpanCourses" },
-	                        _react2.default.createElement(
-	                            _reactRouter.Link,
-	                            { to: "courses" },
-	                            "COURSES"
-	                        )
+	                        { id: "headerSpanCourses", className: "my_a" },
+	                        "COURSES"
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -28907,7 +28899,7 @@
 	                    { id: "headerSpanFaculty", className: "headerItem" },
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: "faculty" },
+	                        { className: "my_a", to: "faculty" },
 	                        "FACULTY"
 	                    )
 	                ),
@@ -28916,12 +28908,8 @@
 	                    { myLi: this.facilities },
 	                    _react2.default.createElement(
 	                        "span",
-	                        { id: "headerSpanFacilities" },
-	                        _react2.default.createElement(
-	                            _reactRouter.Link,
-	                            { to: "computer-lab" },
-	                            "FACILITIES"
-	                        )
+	                        { id: "headerSpanFacilities", className: "my_a" },
+	                        "FACILITIES"
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -28929,25 +28917,17 @@
 	                    { myLi: this.map },
 	                    _react2.default.createElement(
 	                        "span",
-	                        { id: "headerSpanMap" },
-	                        _react2.default.createElement(
-	                            _reactRouter.Link,
-	                            { to: "college-map" },
-	                            "Map"
-	                        )
+	                        { id: "headerSpanMap", className: "my_a" },
+	                        "Map"
 	                    )
 	                ),
 	                _react2.default.createElement(
 	                    _subMenu2.default,
-	                    { myLi: this.others },
+	                    { myLi: this.others, className: "my_a" },
 	                    _react2.default.createElement(
 	                        "span",
-	                        { id: "headerSpanOther" },
-	                        _react2.default.createElement(
-	                            _reactRouter.Link,
-	                            { to: "admission" },
-	                            "OTHERS"
-	                        )
+	                        { id: "headerSpanOther", className: "my_a" },
+	                        "OTHERS"
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -28955,7 +28935,7 @@
 	                    { id: "headerSpanContact", className: "headerItem" },
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: "contact-us" },
+	                        { className: "my_a", to: "contact-us" },
 	                        "CONTACT US"
 	                    )
 	                ),
@@ -28964,7 +28944,7 @@
 	                    { id: "headerSpanLogin", className: "headerItem" },
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: "login" },
+	                        { className: "my_a", to: "login" },
 	                        "Login"
 	                    )
 	                )
@@ -28996,6 +28976,8 @@
 	var _reactMotion = __webpack_require__(238);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -29042,7 +29024,8 @@
 	    }, {
 	        key: "render",
 	        value: function render() {
-	            var _this3 = this;
+	            var _React$createElement,
+	                _this3 = this;
 
 	            return _react2.default.createElement(
 	                "span",
@@ -29050,9 +29033,7 @@
 	                    onMouseLeave: this.handleMouseOut.bind(this) },
 	                _react2.default.createElement(
 	                    "span",
-	                    { style: { position: "relative" }, ref: "findWidth", className: "headerItem",
-	                        onMouseOver: this.handleMouseOver.bind(this)
-	                    },
+	                    (_React$createElement = { style: { position: "relative" }, ref: "findWidth", className: "headerItem" }, _defineProperty(_React$createElement, "style", { color: "white" }), _defineProperty(_React$createElement, "onMouseOver", this.handleMouseOver.bind(this)), _React$createElement),
 	                    this.props.children
 	                ),
 	                _react2.default.createElement(
@@ -39624,21 +39605,45 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                "div",
-	                null,
+	                { style: { marginLeft: "10px" } },
 	                _react2.default.createElement(
 	                    "h1",
 	                    null,
 	                    "The Institute"
 	                ),
-	                _react2.default.createElement("img", { src: "college_campus3.jpg", alt: "" }),
 	                _react2.default.createElement(
-	                    "button",
-	                    { className: "EditSaveBtn", onClick: this.getEdit.bind(this) },
-	                    this.state.editText ? "Save" : "EditText"
+	                    "div",
+	                    { className: "facultyImgContainer" },
+	                    _react2.default.createElement("img", { src: "college_campus3.jpg", className: "facultyImg", alt: "" }),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "photoFacultyUpload" },
+	                        _react2.default.createElement(
+	                            "span",
+	                            null,
+	                            _react2.default.createElement("i", { className: "fa fa-camera", "aria-hidden": "true" })
+	                        ),
+	                        _react2.default.createElement("input", { type: "file", className: "upload" }),
+	                        _react2.default.createElement(
+	                            "span",
+	                            { className: "changePhotoSpan" },
+	                            "Updata Photo"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "EditSaveBtnContainer" },
+	                    _react2.default.createElement(
+	                        "button",
+	                        { className: "EditSaveBtn",
+	                            onClick: this.getEdit.bind(this) },
+	                        this.state.editText ? "Save" : "EditText"
+	                    )
 	                ),
 	                this.state.editText ? _react2.default.createElement("textarea", {
 	                    ref: "textBox",
-	                    style: { width: "100%", height: "300px",
+	                    style: { width: "1300px", height: "300px",
 	                        border: "2px solid whi",
 	                        borderRadius: "4px",
 	                        backgroundColor: "#f8f8f8",
@@ -39730,26 +39735,50 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                "div",
-	                null,
+	                { style: { marginLeft: "10px" } },
 	                _react2.default.createElement(
 	                    "h1",
 	                    null,
 	                    "Vision Mission"
 	                ),
-	                _react2.default.createElement("img", { src: "vision_mission.jpg", alt: "" }),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "facultyImgContainer" },
+	                    _react2.default.createElement("img", { src: "vision_mission.jpg", className: "facultyImg", alt: "" }),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "photoFacultyUpload" },
+	                        _react2.default.createElement(
+	                            "span",
+	                            null,
+	                            _react2.default.createElement("i", { className: "fa fa-camera", "aria-hidden": "true" })
+	                        ),
+	                        _react2.default.createElement("input", { type: "file", className: "upload" }),
+	                        _react2.default.createElement(
+	                            "span",
+	                            { className: "changePhotoSpan" },
+	                            "Updata Photo"
+	                        )
+	                    )
+	                ),
 	                _react2.default.createElement(
 	                    "h2",
 	                    null,
 	                    "Vision"
 	                ),
 	                _react2.default.createElement(
-	                    "button",
-	                    { className: "EditSaveBtn", onClick: this.getEdit.bind(this) },
-	                    this.state.editText ? "Save" : "EditText"
+	                    "div",
+	                    { className: "EditSaveBtnContainer" },
+	                    _react2.default.createElement(
+	                        "button",
+	                        { className: "EditSaveBtn",
+	                            onClick: this.getEdit.bind(this) },
+	                        this.state.editText ? "Save" : "EditText"
+	                    )
 	                ),
 	                this.state.editText ? _react2.default.createElement("textarea", {
 	                    ref: "textBox",
-	                    style: { width: "100%", height: "300px",
+	                    style: { width: "1300px", height: "300px",
 	                        border: "2px solid whi",
 	                        borderRadius: "4px",
 	                        backgroundColor: "#f8f8f8",
@@ -39768,9 +39797,14 @@
 	                    "Mission"
 	                ),
 	                _react2.default.createElement(
-	                    "button",
-	                    { className: "EditSaveBtn", onClick: this.getEdit2.bind(this) },
-	                    this.state.editText2 ? "Save" : "EditText"
+	                    "div",
+	                    { className: "EditSaveBtnContainer" },
+	                    _react2.default.createElement(
+	                        "button",
+	                        { className: "EditSaveBtn",
+	                            onClick: this.getEdit2.bind(this) },
+	                        this.state.editText2 ? "Save" : "EditText"
+	                    )
 	                ),
 	                this.state.editText2 ? _react2.default.createElement("textarea", {
 	                    ref: "textBox2",
@@ -39852,21 +39886,45 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                "div",
-	                null,
+	                { style: { marginLeft: "10px" } },
 	                _react2.default.createElement(
 	                    "h1",
 	                    null,
 	                    "Director Message"
 	                ),
-	                _react2.default.createElement("img", { src: "director.jpg", alt: "" }),
 	                _react2.default.createElement(
-	                    "button",
-	                    { className: "EditSaveBtn", onClick: this.getEdit.bind(this) },
-	                    this.state.editText ? "Save" : "EditText"
+	                    "div",
+	                    { className: "facultyImgContainer" },
+	                    _react2.default.createElement("img", { src: "director.jpg", className: "facultyImg", alt: "" }),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "photoFacultyUpload" },
+	                        _react2.default.createElement(
+	                            "span",
+	                            null,
+	                            _react2.default.createElement("i", { className: "fa fa-camera", "aria-hidden": "true" })
+	                        ),
+	                        _react2.default.createElement("input", { type: "file", className: "upload" }),
+	                        _react2.default.createElement(
+	                            "span",
+	                            { className: "changePhotoSpan" },
+	                            "Updata Photo"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "EditSaveBtnContainer" },
+	                    _react2.default.createElement(
+	                        "button",
+	                        { className: "EditSaveBtn",
+	                            onClick: this.getEdit.bind(this) },
+	                        this.state.editText ? "Save" : "EditText"
+	                    )
 	                ),
 	                this.state.editText ? _react2.default.createElement("textarea", {
 	                    ref: "textBox",
-	                    style: { width: "100%", height: "300px",
+	                    style: { width: "1300px", height: "300px",
 	                        border: "2px solid whi",
 	                        borderRadius: "4px",
 	                        backgroundColor: "#f8f8f8",
@@ -39945,21 +40003,45 @@
 
 	            return _react2.default.createElement(
 	                "div",
-	                null,
+	                { style: { marginLeft: "10px" } },
 	                _react2.default.createElement(
 	                    "h1",
 	                    null,
 	                    "Principle Message"
 	                ),
-	                _react2.default.createElement("img", { src: "prinicpal2.jpg", alt: "" }),
 	                _react2.default.createElement(
-	                    "button",
-	                    { className: "EditSaveBtn", onClick: this.getEdit.bind(this) },
-	                    this.state.editText ? "Save" : "EditText"
+	                    "div",
+	                    { className: "facultyImgContainer" },
+	                    _react2.default.createElement("img", { src: "prinicpal2.jpg", className: "facultyImg", alt: "" }),
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "photoFacultyUpload" },
+	                        _react2.default.createElement(
+	                            "span",
+	                            null,
+	                            _react2.default.createElement("i", { className: "fa fa-camera", "aria-hidden": "true" })
+	                        ),
+	                        _react2.default.createElement("input", { type: "file", className: "upload" }),
+	                        _react2.default.createElement(
+	                            "span",
+	                            { className: "changePhotoSpan" },
+	                            "Updata Photo"
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "EditSaveBtnContainer" },
+	                    _react2.default.createElement(
+	                        "button",
+	                        { className: "EditSaveBtn",
+	                            onClick: this.getEdit.bind(this) },
+	                        this.state.editText ? "Save" : "EditText"
+	                    )
 	                ),
 	                this.state.editText ? _react2.default.createElement("textarea", {
 	                    ref: "textBox",
-	                    style: { width: "100%", height: "300px",
+	                    style: { width: "1300px", height: "300px",
 	                        border: "2px solid whi",
 	                        borderRadius: "4px",
 	                        backgroundColor: "#f8f8f8",

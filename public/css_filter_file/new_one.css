@@ -5,6 +5,8 @@ body {
 }
 
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -15,21 +17,31 @@ body {
 }
 
 .header {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
-   height: 48px;
+    height: 48px;
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
+    -ms-flex-negative: 1;
     flex-shrink: 1;
     background-color: #11a640;
     box-shadow: 0 1px 1px 1px;
     border-radius: 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin:0 auto 0 auto ;
 }
 
 #clg-name {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     height: 48px;
+    -ms-flex-preferred-size: 320px;
     flex-basis: 320px;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
@@ -42,8 +54,12 @@ body {
 }
 
 #logo {
+    -ms-flex-preferred-size: 48px;
     flex-basis: 48px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+    -ms-flex-negative: 1;
     flex-shrink: 1;
     height: 48px;
     width: 48px;
@@ -61,22 +77,27 @@ body {
     font: normal 100px/normal "Passero One", Helvetica, sans-serif;
     color: rgba(255, 255, 255, 1);
     text-align: center;
-    -o-text-overflow: clip;
     text-overflow: clip;
     text-shadow: 0 1px 0 rgb(204, 204, 204), 0 1px 0 rgb(201, 201, 201), 0 1px 0 rgb(187, 187, 187), 0 1px 0 rgb(185, 185, 185), 0 1px 0 rgb(170, 170, 170), 0 6px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 1px 3px rgba(0, 0, 0, 0.298039), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.247059), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.14902);
+    -webkit-transition:all 300ms cubic-bezier(0.42, 0, 0.58, 1);
     transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .clg-name-3d:hover {
     color: rgba(169, 214, 169, 1);
     text-shadow: 0 1px 0 rgba(255, 255, 255, 1), 0 1px 0 rgba(255, 255, 255, 1), 0 1px 0 rgba(255, 255, 255, 1), 0 1px 0 rgba(255, 255, 255, 1), 0 1px 0 rgba(255, 255, 255, 1), 0 2px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 1px 3px rgba(0, 0, 0, 0.298039), 0 3px 5px rgba(0, 0, 0, 0.2), 0 -5px 10px rgba(0, 0, 0, 0.247059), 0 -7px 10px rgba(0, 0, 0, 0.2), 0 -15px 20px rgba(0, 0, 0, 0.14902);
+    -webkit-transition:all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
     transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
 .headerItem {
     text-shadow: 0 0.5px 0 rgb(204, 204, 204), 0 0.5px 0 rgb(201, 201, 201), 0 0.5px 0 rgb(187, 187, 187), 0 0.5px 0 rgb(185, 185, 185), 0 0.5px 0 rgb(170, 170, 170), 0 0.5px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 0.5px 3px rgba(0, 0, 0, 0.298039), 0 0.5px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.247059), 0 0.5px 10px rgba(0, 0, 0, 0.2), 0 0.5px 20px rgba(0, 0, 0, 0.14902);
+    -ms-flex-preferred-size: 48px;
     flex-basis: 48px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+    -ms-flex-negative: 1;
     flex-shrink: 1;
     border-right: 1px solid black;
     display: inline-block;
@@ -115,10 +136,18 @@ body {
     height: 4px;
     width: 0;
     background-color: red;
+    -webkit-animation-name: loaderBarAnimation;
     animation-name: loaderBarAnimation;
+    -webkit-animation-duration: 4s;
     animation-duration: 4s;
      animation-direction: alternate;
 
+}
+@-webkit-keyframes loaderBarAnimation{
+    0%{width:10px}
+    50%{width: 50%}
+    70%{width: 70%}
+    80%{width: 80%}
 }
 @keyframes loaderBarAnimation{
     0%{width:10px}
@@ -127,9 +156,16 @@ body {
     80%{width: 80%}
 }
 .profilePhotoContainer {
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+    -ms-flex-negative: 1;
     flex-shrink: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
     height: 350px;
@@ -143,13 +179,20 @@ body {
     height: 350px;
     width: 100%;
     display: none;
+    -webkit-animation-name: setCoverImg;
     animation-name: setCoverImg;
+    -webkit-animation-duration: 4s;
     animation-duration: 4s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
+@-webkit-keyframes setCoverImg{
+    to{opacity: 1;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"}
+    from{opacity: 0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}
+}
 @keyframes setCoverImg{
-   to{opacity: 1}
-    from{opacity: 0}
+    to{opacity: 1;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"}
+    from{opacity: 0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}
 }
 .fileUpload {
     top: 330px;
@@ -165,6 +208,7 @@ body {
     min-height: 100%;
     min-width: 100%;
     opacity: 0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     position: absolute;
     right: 0;
     text-align: right;
@@ -177,7 +221,7 @@ body {
     text-align: center;
 }
 .leftProfileBtn{
-   position: absolute;
+    position: absolute;
     top: 111px;
     left: 2%;
     z-index: 100;
@@ -186,7 +230,7 @@ body {
     position: absolute;
     top: 111px;
     left:94%;
-   z-index: 100;
+    z-index: 100;
 }
 .dpDot{
     height: 13px;
@@ -201,18 +245,28 @@ body {
     text-align: center;
 }
 .writeSUB {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+    -ms-flex-negative: 1;
     flex-shrink: 1;
     height: 50px;
     background-color: #11a640;
 }
 
 .body-container {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+    -ms-flex-negative: 1;
     flex-shrink: 1;
     margin: 0 0 0 0;
     width:100%;
@@ -278,7 +332,7 @@ body {
     position: relative;
 }
 .EditSaveBtn{
-   background-color: #4dc71f;
+    background-color: #4dc71f;
     border-radius: 5px;
     color: white;
     text-align: center;
@@ -293,9 +347,16 @@ body {
     position: relative;
     width: 670px;
     height: 273px;
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+    -ms-flex-negative: 1;
     flex-shrink: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     background-color: white;
     z-index: 99;
@@ -323,6 +384,7 @@ body {
     min-height: 100%;
     min-width: 100%;
     opacity: 0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     position: absolute;
     right: 0;
     text-align: right;
