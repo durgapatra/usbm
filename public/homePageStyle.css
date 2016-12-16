@@ -1,13 +1,18 @@
 body {
-    margin:0 auto 0 auto;
+    margin: 0 auto 0 auto;
     padding: 0;
     z-index: 50;
 }
 
 .container {
     display: flex;
+    -webkit-flex-flow: wrap;
+    -webkit-flex-direction: row;
 }
-
+.containerAllDataBox{
+    margin:0 auto 0 auto ;
+    width: 1350px;
+}
 .homePage {
     margin: 0 auto;
     min-height: 800px;
@@ -16,14 +21,14 @@ body {
 
 .header {
     flex: 1;
-   height: 48px;
+    height: 48px;
     flex-basis: 100%;
     flex-shrink: 1;
     background-color: #11a640;
     box-shadow: 0 1px 1px 1px;
     border-radius: 2px;
     display: flex;
-    margin:0 auto 0 auto ;
+    margin: 0 auto 0 auto;
 }
 
 #clg-name {
@@ -74,8 +79,9 @@ body {
 }
 
 .headerItem {
+    cursor: pointer;
     text-shadow: 0 0.5px 0 rgb(204, 204, 204), 0 0.5px 0 rgb(201, 201, 201), 0 0.5px 0 rgb(187, 187, 187), 0 0.5px 0 rgb(185, 185, 185), 0 0.5px 0 rgb(170, 170, 170), 0 0.5px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 0.5px 3px rgba(0, 0, 0, 0.298039), 0 0.5px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.247059), 0 0.5px 10px rgba(0, 0, 0, 0.2), 0 0.5px 20px rgba(0, 0, 0, 0.14902);
-    flex-basis: 48px;
+    flex-basis: 60px;
     flex-grow: 1;
     flex-shrink: 1;
     border-right: 1px solid black;
@@ -88,6 +94,8 @@ body {
     text-transform: uppercase;
     text-align: center;
     line-height: 46px;
+    width: 60px;
+
 }
 
 .header span a {
@@ -105,9 +113,17 @@ body {
 
 }
 
+.headerColorRed span {
+    color: red;
+    text-shadow: 0 1px 0 rgb(255, 10, 27), 0 1px 0 rgb(255, 10, 27), 0 1px 0 rgb(255, 10, 27), 0 1px 0 rgb(255, 10, 27), 0 1px 0 rgb(255, 10, 27), 0 2px 1px rgba(0, 0, 0, 0), 0 0 0px rgba(0, 0, 0, 0), 0 0px 0px rgba(0, 0, 0, 0), 0 0px 0px rgba(0, 0, 0, 0), 0 -10px 5px rgba(0, 0, 0, 0), 0 -2px 5px rgba(0, 0, 0, 0), 0 -5px 10px rgba(0, 0, 0, 0);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+
+}
+
 .header span .my_a:hover {
-    color: #ec353e;
-    text-shadow: 0 1px 0 rgb(255, 25, 23), 0 1px 0 rgb(255, 22, 16), 0 1px 0 rgb(255, 23, 18), 0 1px 0 rgb(255, 35, 11), 0 1px 0 rgb(255, 21, 14), 0 2px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 1px 3px rgba(0, 0, 0, 0.298039), 0 3px 5px rgba(0, 0, 0, 0.2), 0 -5px 10px rgba(0, 0, 0, 0.247059), 0 -7px 10px rgba(0, 0, 0, 0.2), 0 -15px 20px rgba(0, 0, 0, 0.14902);
+    color: #ec0003;
+    text-shadow: 0 1px 0 rgb(255, 10, 27), 0 1px 0 rgb(255, 10, 27), 0 1px 0 rgb(255, 10, 27), 0 1px 0 rgb(255, 10, 27), 0 1px 0 rgb(255, 10, 27), 0 2px 1px rgba(0, 0, 0, 0), 0 0 0px rgba(0, 0, 0, 0), 0 0px 0px rgba(0, 0, 0, 0), 0 0px 0px rgba(0, 0, 0, 0), 0 -10px 5px rgba(0, 0, 0, 0), 0 -2px 5px rgba(0, 0, 0, 0), 0 -5px 10px rgba(0, 0, 0, 0);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
 .loaderBar {
@@ -117,15 +133,25 @@ body {
     background-color: red;
     animation-name: loaderBarAnimation;
     animation-duration: 4s;
-     animation-direction: alternate;
+     animation-direction:  alternate;
 
 }
-@keyframes loaderBarAnimation{
-    0%{width:10px}
-    50%{width: 50%}
-    70%{width: 70%}
-    80%{width: 80%}
+
+@keyframes loaderBarAnimation {
+    0% {
+        width: 10px
+    }
+    50% {
+        width: 50%
+    }
+    70% {
+        width: 70%
+    }
+    80% {
+        width: 80%
+    }
 }
+
 .profilePhotoContainer {
     flex-basis: 100%;
     flex-grow: 1;
@@ -137,8 +163,9 @@ body {
     width: 100%;
     z-index: 99;
     box-shadow: 0 0 2px 0;
-    margin:0 auto 0 auto;
+    margin: 0 auto 0 auto;
 }
+
 .coverImg {
     height: 350px;
     width: 100%;
@@ -147,61 +174,75 @@ body {
     animation-duration: 4s;
     animation-fill-mode: forwards;
 }
-@keyframes setCoverImg{
-   to{opacity: 1}
-    from{opacity: 0}
+
+@keyframes setCoverImg {
+    to {
+        opacity: 1
+    }
+    from {
+        opacity: 0
+    }
 }
+
 .fileUpload {
     top: 330px;
     left: 15px;
     overflow: hidden;
     position: absolute;
 }
-.fileUpload  [type=file] {
-    cursor: inherit;
+
+.fileUpload [type=file] {
+    cursor: pointer;
     display: block;
-    font-size: 999px;
+    font-size: 0;
     filter: alpha(opacity=0);
-    min-height: 100%;
-    min-width: 100%;
+    height: 100%;
+    width: 100%;
     opacity: 0;
     position: absolute;
     right: 0;
     text-align: right;
     top: 0;
 }
-.changeCoverPhotoSpan{
+
+.changeCoverPhotoSpan {
     background-color: inherit;
     margin-left: 1px;
     height: 16px;
     text-align: center;
 }
-.leftProfileBtn{
-   position: absolute;
+
+.leftProfileBtn {
+    cursor: pointer;
+    position: absolute;
     top: 111px;
     left: 2%;
     z-index: 100;
 }
-.rightProfileBtn{
+
+.rightProfileBtn {
+    cursor: pointer;
     position: absolute;
     top: 111px;
-    left:94%;
-   z-index: 100;
+    left: 94%;
+    z-index: 100;
 }
-.dpDot{
+
+.dpDot {
+    cursor: pointer;
     height: 13px;
     width: 13px;
     background-color: rgb(225, 225, 225);
     border-radius: 50%;
     display: inline-block;
-    margin:15px 0 0 10px ;
+    margin: 15px 0 0 10px;
     z-index: 101;
     color: #e1e1e1;
     font-size: 14px;
     text-align: center;
 }
+
 .writeSUB {
-    flex: 1;
     flex-basis: 100%;
     flex-grow: 1;
     flex-shrink: 1;
@@ -210,47 +251,10 @@ body {
 }
 
 .body-container {
-    flex: 1;
-    flex-basis: 100%;
-    flex-grow: 1;
-    flex-shrink: 1;
-    margin: 0 0 0 0;
-    width:100%;
-}
-
-.body-container h1 {
-    font-size: 26px;
-    padding: 15px 0;
-    color: #11a640;
-    font-family: Calibri;
-    float: left;
-}
-
-.body-container div p img {
-    padding: 5px 2px 8px 0;
-}
-
-.float_left {
-    float: left;
-}
-
-.float_right {
-    float: right;
-}
-
-.body-container p img {
-    padding: 5px 5px 8px 0;
-}
-
-.body-container p {
-    margin: 80px 2px 0 -200px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    color: #424141;
-    text-align: justify;
-    line-height: 19px;
-    width: 500px;
-    display: table;
+    margin: 5px 5px 5px 5px;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
 }
 
 .homePageFuture {
@@ -258,38 +262,77 @@ body {
     background-color: #11a640;
 }
 
-.ourPride {
-    width: 280px;
-    height: 235px;
-    border: 25px solid gray;
-    float: right;
-    margin: 60PX 100px 0 0;
+.usbmAtGlanceBox {
+    order: 1;
+    flex: 1 1 500px;
+    min-height: 300px;
+    margin: 5px 5px 5px 5px;
 }
-.ourPride h1 {
+
+.usbmAtGlanceBox h1 {
     font-size: 26px;
-    padding: 6px 500px 0 0;
-    color: #a50133;
+    padding: 15px 0;
+    color: #11a640;
     font-family: Calibri;
-    display: block;
-    margin-left: 25px;
 }
-.EditSaveBtnContainer{
-    margin:10px auto 0 50%;
+
+.usbmAtGlanceBox .usbmAtGlance p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #424141;
+    text-align: justify;
+    line-height: 19px;
+    padding-bottom: 6px;
+}
+
+.usbmAtGlanceBox .usbmAtGlance p img {
+    float: left;
+    margin-right: 20px;
+    padding: 5px 2px 8px 0;
+}
+
+.ourPrideBox {
+    order: 2;
+    flex: 1 1 600px;
+    min-height: 300px;
+    margin: 5px 5px 5px 15px;
+
+}
+
+.ourPrideBox h1 {
+    font-size: 26px;
+    padding: 15px 0;
+    color: #11a640;
+    font-family: Calibri;
+
+}
+.ourPride{
+    height: 250px;
+    width: 550px;
+    border: 25px solid gray;
+
+}
+.EditSaveBtnContainer {
+    margin: 10px auto 0 50%;
     position: relative;
 }
-.EditSaveBtn{
-   background-color: #4dc71f;
+
+.EditSaveBtn {
+    cursor: pointer;
+    background-color: #4dc71f;
     border-radius: 5px;
     color: white;
     text-align: center;
 }
-.facultyImg{
+
+.facultyImg {
     width: 670px;
     height: 273px;
     position: relative;
     z-index: 100;
 }
-.facultyImgContainer{
+
+.facultyImgContainer {
     position: relative;
     width: 670px;
     height: 273px;
@@ -301,7 +344,8 @@ body {
     z-index: 99;
     box-shadow: 0 0 2px 0;
 }
-.changePhotoSpan{
+
+.changePhotoSpan {
     background-color: inherit;
     margin-left: 1px;
     height: 16px;
@@ -310,21 +354,21 @@ body {
 }
 
 .photoFacultyUpload {
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     position: absolute;
     z-index: 100;
 }
+
 .photoFacultyUpload [type=file] {
-    cursor: inherit;
-    display: block;
-    font-size: 999px;
-    filter: alpha(opacity=0);
-    min-height: 100%;
-    min-width: 100%;
+    cursor: pointer;
+    font-size: 0;
+    height: 100%;
+    width: 100%;
     opacity: 0;
     position: absolute;
     right: 0;
     text-align: right;
     top: 0;
+    left: 0;
 }

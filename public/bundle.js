@@ -27234,7 +27234,7 @@
 	                _react2.default.createElement("div", { className: "loaderBar", ref: "loadeBar" }),
 	                _react2.default.createElement(
 	                    "div",
-	                    { style: { width: "1350px", margin: "0 auto 0 auto" } },
+	                    { className: "containerAllDataBox" },
 	                    this.props.children || _react2.default.createElement(_home2.default, null)
 	                )
 	            );
@@ -29002,6 +29002,7 @@
 	    _createClass(SubMenu, [{
 	        key: "handleMouseOver",
 	        value: function handleMouseOver() {
+	            this.refs.findWidth.className = "headerItem headerColorRed";
 	            this.state.hover = true;
 	            this.setState(this.state);
 	        }
@@ -29011,6 +29012,7 @@
 	            var _this2 = this;
 
 	            setTimeout(function () {
+	                _this2.refs.findWidth.className = "headerItem";
 	                _this2.state.hover = false;
 	                _this2.setState(_this2.state);
 	            }, 100);
@@ -29019,7 +29021,7 @@
 	        key: "componentDidMount",
 	        value: function componentDidMount() {
 	            this.layer.style.width = this.refs.findWidth.offsetWidth + "px";
-	            this.triangleBox.style.marginLeft = this.refs.findWidth.offsetWidth / 4 + "px";
+	            this.triangleBox.style.marginLeft = this.refs.findWidth.offsetWidth / 3 + "px";
 	        }
 	    }, {
 	        key: "render",
@@ -39503,7 +39505,7 @@
 	                            _react2.default.createElement(
 	                                "span",
 	                                { className: "changeCoverPhotoSpan" },
-	                                "Updata Couer Photo"
+	                                "Updata Cover Photo"
 	                            )
 	                        ),
 	                        _react2.default.createElement("img", { src: "", alt: "" })
@@ -39512,34 +39514,39 @@
 	                _react2.default.createElement("div", { className: "writeSUB" }),
 	                _react2.default.createElement(
 	                    "div",
-	                    { className: "container" },
+	                    { className: "body-container" },
 	                    _react2.default.createElement(
 	                        "div",
-	                        { className: "body-container" },
+	                        { className: "usbmAtGlanceBox" },
 	                        _react2.default.createElement(
 	                            "h1",
 	                            null,
 	                            "USBM AT A GLANCE"
 	                        ),
 	                        _react2.default.createElement(
-	                            "p",
-	                            { className: "float_left  ", style: { display: "block" } },
-	                            _react2.default.createElement("img", { className: "float_left", src: "\\uploads\\collage-images.jpg", alt: "" }),
-	                            "United School of Business Management (USBM) is conveniently located in the heart of Bhubaneswar, the capital city of Orissa which is blended with ancient and modern Indian culture. USBM is established with an initiative and support from some of the leading academicians, industrialists and business houses. Within a short span, it has revolutionised the concept of professional MBA & MCA training. It has ceaselessly been pursuing and traversing new areas of excellence in academics with an enviable success rate in the state as well as in the country. USBM is approved by All India Council for Technical Education (AICTE), Ministry of HRD, Govt. of India and is affiliated to Biju Patnaik University of Technology (BPUT), Govt, of Orissa."
-	                        ),
-	                        _react2.default.createElement(
 	                            "div",
-	                            null,
+	                            { className: "usbmAtGlance" },
 	                            _react2.default.createElement(
-	                                "h1",
-	                                { className: "float_right" },
-	                                "Our Pride"
-	                            ),
-	                            _react2.default.createElement("div", { className: "ourPride" })
+	                                "p",
+	                                null,
+	                                _react2.default.createElement("img", { className: "float_left", src: "\\uploads\\collage-images.jpg", alt: "" }),
+	                                "United School of Business Management (USBM) is conveniently located in the heart of Bhubaneswar, the capital city of Orissa which is blended with ancient and modern Indian culture. USBM is established with an initiative and support from some of the leading academicians, industrialists and business houses. Within a short span, it has revolutionised the concept of professional MBA & MCA training. It has ceaselessly been pursuing and traversing new areas of excellence in academics with an enviable success rate in the state as well as in the country. USBM is approved by All India Council for Technical Education (AICTE), Ministry of HRD, Govt. of India and is affiliated to Biju Patnaik University of Technology (BPUT), Govt, of Orissa."
+	                            )
 	                        )
 	                    ),
-	                    _react2.default.createElement("div", { className: "homePageFuture" })
-	                )
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "ourPrideBox" },
+	                        _react2.default.createElement(
+	                            "h1",
+	                            null,
+	                            "Our Pride"
+	                        ),
+	                        _react2.default.createElement("div", { className: "ourPride" })
+	                    ),
+	                    _react2.default.createElement("div", { className: "ourPrideBox" })
+	                ),
+	                _react2.default.createElement("div", { className: "homePageFuture" })
 	            );
 	        }
 	    }]);

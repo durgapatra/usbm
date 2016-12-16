@@ -15,6 +15,7 @@
     z-index: 101;
 }
 .layer{
+    cursor: pointer;
     flex-basis: 48px;
     flex-grow: 1;
     flex-shrink: 1;
@@ -28,10 +29,13 @@
     left: -131px;
 
 }
+.layer:hover{
+    color:inherit;
+}
+
 #subMenu{
     z-index: 100;
     border-top: 1px solid black;
-    flex: 1;
     flex-basis: 48px;
     flex-grow: 1;
     flex-shrink: 1;

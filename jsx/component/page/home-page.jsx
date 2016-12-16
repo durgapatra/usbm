@@ -42,7 +42,7 @@ export default class HomePage extends React.Component {
                     <Header></Header>
                 </div>
                 <div className="loaderBar" ref="loadeBar"></div>
-                <div style={{width:"1350px",margin:"0 auto 0 auto"}}>
+                <div className="containerAllDataBox">
                     {this.props.children || <Home/>}
                 </div>
             </div>

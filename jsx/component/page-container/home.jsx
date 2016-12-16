@@ -5,7 +5,7 @@ export default class Home extends React.Component {
         super()
 
         this.state = {
-            changePhoto:false,
+            changePhoto: false,
             countNo: 0,
             profilePhotos: [
                 {dp: true},
@@ -57,12 +57,15 @@ export default class Home extends React.Component {
         }
         this.setState(this.state)
     }
-    mouseOver(){
-        this.state.changePhoto=true
+
+    mouseOver() {
+        this.state.changePhoto = true
     }
-    mouseLeave(){
-        this.state.changePhoto=true
+
+    mouseLeave() {
+        this.state.changePhoto = true
     }
+
     handleProfile(e) {
         /*  e.preventDefault();
          var file = e.target.files[0];
@@ -130,8 +133,8 @@ export default class Home extends React.Component {
                         <div className="sideBox"></div>
                         <div className="fileUpload">
                             <span><i className="fa fa-camera" aria-hidden="true"></i></span>
-                            <input type="file" className="upload" />
-                            <span className="changeCoverPhotoSpan">Updata Couer Photo</span>
+                            <input type="file" className="upload"/>
+                            <span className="changeCoverPhotoSpan">Updata Cover Photo</span>
                         </div>
                         <img src="" alt=""/>
                     </div>
@@ -139,31 +142,40 @@ export default class Home extends React.Component {
                 <div className="writeSUB">
 
                 </div>
-                <div className="container">
-                    <div className="body-container">
+
+                <div className="body-container">
+                    <div className="usbmAtGlanceBox">
                         <h1>USBM AT A GLANCE</h1>
-                        <p className="float_left  " style={{display:"block"}}>
-                            <img className="float_left" src="\uploads\collage-images.jpg" alt=""/>
-                            United School of Business Management (USBM) is conveniently located in
-                            the heart of Bhubaneswar, the capital city of Orissa which is blended
-                            with ancient and modern Indian culture. USBM is established with an
-                            initiative and support from some of the leading academicians,
-                            industrialists and business houses. Within a short span, it has
-                            revolutionised the concept of professional MBA &amp; MCA training.
-                            It has ceaselessly been pursuing and traversing new areas of excellence
-                            in academics with an enviable success rate in the state as well as in
-                            the country. USBM is approved by All India Council for Technical
-                            Education (AICTE), Ministry of HRD, Govt. of India and is affiliated
-                            to Biju Patnaik University of Technology (BPUT), Govt, of Orissa.
-                        </p>
-                        <div>
-                            <h1 className="float_right">Our Pride</h1>
-                            <div className="ourPride">
-                            </div>
+
+                        <div className="usbmAtGlance">
+                            <p>
+                                <img className="float_left" src="\uploads\collage-images.jpg" alt=""/>
+                                United School of Business Management (USBM) is conveniently located in
+                                the heart of Bhubaneswar, the capital city of Orissa which is blended
+                                with ancient and modern Indian culture. USBM is established with an
+                                initiative and support from some of the leading academicians,
+                                industrialists and business houses. Within a short span, it has
+                                revolutionised the concept of professional MBA &amp; MCA training.
+                                It has ceaselessly been pursuing and traversing new areas of excellence
+                                in academics with an enviable success rate in the state as well as in
+                                the country. USBM is approved by All India Council for Technical
+                                Education (AICTE), Ministry of HRD, Govt. of India and is affiliated
+                                to Biju Patnaik University of Technology (BPUT), Govt, of Orissa.
+                            </p>
+
                         </div>
+
                     </div>
-                    <div className="homePageFuture"></div>
+                    <div className="ourPrideBox">
+                        <h1>Our Pride</h1>
+                        <div className="ourPride"></div>
+                    </div>
+                    <div className="ourPrideBox">
+
+                    </div>
                 </div>
+
+                <div className="homePageFuture"></div>
             </div>)
     }
 

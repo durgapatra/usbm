@@ -32,7 +32,9 @@
     width: 600px;
     background-color: #0a6565;
     margin:10px 10px ;
-}.fire {
+}
+
+.fire {
      -webkit-box-sizing: content-box;
      -moz-box-sizing: content-box;
      box-sizing: content-box;

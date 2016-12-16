@@ -10,12 +10,14 @@ export default class SubMenu extends React.Component {
     }
 
     handleMouseOver() {
+        this.refs.findWidth.className="headerItem headerColorRed";
         this.state.hover = true;
         this.setState(this.state);
     }
 
     handleMouseOut() {
         setTimeout(()=>{
+            this.refs.findWidth.className="headerItem"
             this.state.hover = false;
             this.setState(this.state);
         },100)
@@ -23,7 +25,7 @@ export default class SubMenu extends React.Component {
     }
     componentDidMount() {
         this.layer.style.width = this.refs.findWidth.offsetWidth + "px";
-        this.triangleBox.style.marginLeft = this.refs.findWidth.offsetWidth / 4 + "px";
+        this.triangleBox.style.marginLeft = this.refs.findWidth.offsetWidth / 3 + "px";
     }
     render() {
         return (
