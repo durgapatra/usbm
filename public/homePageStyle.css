@@ -4,11 +4,7 @@ body {
     z-index: 50;
 }
 
-.container {
-    display: flex;
-    -webkit-flex-flow: wrap;
-    -webkit-flex-direction: row;
-}
+
 .containerAllDataBox{
     margin:0 auto 0 auto ;
     width: 1350px;
@@ -47,27 +43,22 @@ body {
 }
 
 #logo {
-    flex-basis: 48px;
-    flex-grow: 1;
-    flex-shrink: 1;
     height: 48px;
     width: 48px;
-    display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: white;
 }
 
 .clg-name-3d {
-    box-sizing: content-box;
+    /* box-sizing: content-box;
     cursor: pointer;
     border: none;
-    font: normal 100px/normal "Passero One", Helvetica, sans-serif;
+    font: normal 10px/normal "Passero One", Helvetica, sans-serif;
     color: rgba(255, 255, 255, 1);
     text-align: center;
     -o-text-overflow: clip;
-    text-overflow: clip;
+    text-overflow: clip; */
     text-shadow: 0 1px 0 rgb(204, 204, 204), 0 1px 0 rgb(201, 201, 201), 0 1px 0 rgb(187, 187, 187), 0 1px 0 rgb(185, 185, 185), 0 1px 0 rgb(170, 170, 170), 0 6px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 1px 3px rgba(0, 0, 0, 0.298039), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.247059), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.14902);
     transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
 }
@@ -77,26 +68,61 @@ body {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 1), 0 1px 0 rgba(255, 255, 255, 1), 0 1px 0 rgba(255, 255, 255, 1), 0 1px 0 rgba(255, 255, 255, 1), 0 1px 0 rgba(255, 255, 255, 1), 0 2px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 1px 3px rgba(0, 0, 0, 0.298039), 0 3px 5px rgba(0, 0, 0, 0.2), 0 -5px 10px rgba(0, 0, 0, 0.247059), 0 -7px 10px rgba(0, 0, 0, 0.2), 0 -15px 20px rgba(0, 0, 0, 0.14902);
     transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
-
-.headerItem {
-    cursor: pointer;
-    text-shadow: 0 0.5px 0 rgb(204, 204, 204), 0 0.5px 0 rgb(201, 201, 201), 0 0.5px 0 rgb(187, 187, 187), 0 0.5px 0 rgb(185, 185, 185), 0 0.5px 0 rgb(170, 170, 170), 0 0.5px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 0.5px 3px rgba(0, 0, 0, 0.298039), 0 0.5px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.247059), 0 0.5px 10px rgba(0, 0, 0, 0.2), 0 0.5px 20px rgba(0, 0, 0, 0.14902);
-    flex-basis: 60px;
-    flex-grow: 1;
-    flex-shrink: 1;
-    border-right: 1px solid black;
-    display: inline-block;
-    color: #e1e1e1;
-    font-size: 12px;
-    font-family: Calibri;
-    text-decoration: none;
-    font-weight: normal;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 46px;
-    width: 60px;
-
+/*.................header style....................................  */
+.dropdown-menu>li:hover a a{
+     text-decoration: none;
+     color: black
 }
+
+ .dropdown-menu>li>a{
+  text-decoration: none;
+    color: white;
+     background-color: #11a640;
+}
+.navbar-nav>li>.dropdown-menu{
+      background-color: #11a640;
+}
+ .dropdown-menu>li>a a{
+  text-decoration: none;
+    color: white;
+}
+.navbar-default .navbar-toggle{
+    border:1px solid white;    
+    background-color: black;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+       background: rgb(63, 13, 13);
+}
+#basic-nav-dropdown li{
+       text-decoration: none;
+    color: #e6e6e6;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #cf3b3b;
+    background-color: #e7e7e7;
+}
+
+/* .dropdown  a{
+    background: red;
+   
+}
+ */
+
+ #basic-nav-dropdown1, #basic-nav-dropdown2, #basic-nav-dropdown3, #basic-nav-dropdown4, #basic-nav-dropdown5{
+ color: white;
+ }
+#noMenu:hover{
+background-color: #e7e7e7;
+}
+#noMenu a{
+       text-decoration: none;
+}
+
+
+/*..............................................  */
+
 
 .header span a {
     display: inline-block;
@@ -183,12 +209,13 @@ body {
         opacity: 0
     }
 }
-
+/*................home photo cycle box..................................  */
 .fileUpload {
-    top: 330px;
+    top: -25px;
     left: 15px;
     overflow: hidden;
-    position: absolute;
+    position: relative;
+    color: white;
 }
 
 .fileUpload [type=file] {
@@ -204,6 +231,20 @@ body {
     text-align: right;
     top: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .changeCoverPhotoSpan {
     background-color: inherit;
