@@ -28,7 +28,7 @@ export default class Home extends React.Component {
 
         return (
             <div>
-                <Carousel interval={10000} activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect.bind(this)}>
+                <Carousel interval={100} activeIndex={this.state.index} direction={this.state.direction} onSelect={this.handleSelect.bind(this)}>
                     <Carousel.Item>
                         <img width={1554} height={500} alt="900x500" src="uploads/0.jpg" />
                         {/*......uploding a new image ...........  */}

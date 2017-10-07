@@ -60124,7 +60124,7 @@
 	                null,
 	                _react2.default.createElement(
 	                    _reactBootstrap.Carousel,
-	                    { interval: 10000, activeIndex: this.state.index, direction: this.state.direction, onSelect: this.handleSelect.bind(this) },
+	                    { interval: 100, activeIndex: this.state.index, direction: this.state.direction, onSelect: this.handleSelect.bind(this) },
 	                    _react2.default.createElement(
 	                        _reactBootstrap.Carousel.Item,
 	                        null,
