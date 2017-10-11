@@ -18,7 +18,7 @@ export default class HomePage extends React.Component {
         return (
             <div>
                 <Header></Header>
-                <div className="container-fluid">
+                <div className="container">
                     {this.props.children || <Home />}
                 </div>
             </div>

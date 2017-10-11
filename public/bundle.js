@@ -27648,7 +27648,7 @@
 	                _react2.default.createElement(_header2.default, null),
 	                _react2.default.createElement(
 	                    "div",
-	                    { className: "container-fluid" },
+	                    { className: "container" },
 	                    this.props.children || _react2.default.createElement(_home2.default, null)
 	                )
 	            );
