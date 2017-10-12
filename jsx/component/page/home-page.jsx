@@ -15,10 +15,11 @@ export default class HomePage extends React.Component {
 
 
     render() {
+        console.log(window.innerWidth);
         return (
             <div>
                 <Header></Header>
-                <div className="container">
+                <div className={window.innerWidth < 1400 ? "container-fluid" : "container"}>
                     {this.props.children || <Home />}
                 </div>
             </div>

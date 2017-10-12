@@ -27642,13 +27642,14 @@
 	    _createClass(HomePage, [{
 	        key: "render",
 	        value: function render() {
+	            console.log(window.innerWidth);
 	            return _react2.default.createElement(
 	                "div",
 	                null,
 	                _react2.default.createElement(_header2.default, null),
 	                _react2.default.createElement(
 	                    "div",
-	                    { className: "container" },
+	                    { className: window.innerWidth < 1400 ? "container-fluid" : "container" },
 	                    this.props.children || _react2.default.createElement(_home2.default, null)
 	                )
 	            );
